@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Make A Payment</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Payment Form Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-4 p-sm-5">
+                        <h2 class="mb-4">Required Details</h2>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="tel" class="form-control border-0" placeholder="Your Phone No" style="height: 55px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control border-0" placeholder="Amount in USD" style="height: 55px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;">
+                                        <option selected>USD</option>
+                                        <option>EUR</option>
+                                        <option>GBP</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control border-0 bg-light" value="0.00" readonly style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Proceed</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="text-center mt-4">
+                            <small>Currency Changer Powered By <img src="https://www.exchangerate-api.com/img/hr-logo-2022-ldpi-rc.png" alt="ExchangeRate-API" height="20"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Form End -->
+
+{% endblock %}
