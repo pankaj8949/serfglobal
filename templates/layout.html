@@ -30,6 +30,81 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- Responsive Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .topbar-info {
+                display: none;
+            }
+            
+            .navbar-brand img {
+                height: 40px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer .col-lg-3 {
+                margin-bottom: 30px;
+            }
+
+            .back-to-top {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .navbar-brand {
+                padding-left: 15px;
+            }
+
+            .navbar-toggler {
+                margin-right: 15px;
+            }
+        }
+
+        /* Make images responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Make tables responsive */
+        table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Improve form elements responsiveness */
+        input, select, textarea {
+            max-width: 100%;
+        }
+
+        /* Flexible video embeds */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,42 +116,56 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <div class="h-100 d-inline-flex align-items-center py-1 me-4">
                     <small class="fa fa-envelope text-primary me-2"></small>
                     <small><a href="mailto:serfjaipur@gmail.com" style="color: inherit; text-decoration: none;">serfjaipur@gmail.com</a></small>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
+                <div class="h-100 d-inline-flex align-items-center py-">
                     <small class="far fa-clock text-primary me-2"></small>
                     <small id="current-time">Loading...</small>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center py-3 ms-4">
-                    <a href="make-a-payment" class="btn py-2 px-2" style="background-color: #2a3056; color: white;" target="_blank">
+                <div class="h-100 d-inline-flex align-items-center py- ms-4">
+                    <a href="make-a-payment" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;" target="_blank">
                         <small class="fa fa-credit-card me-2"></small>
                         <small>Make A Payment</small>
                     </a>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center py-3 ms-4">
-                    <a href="https://janolijournals.org/" class="btn py-2 px-2" style="background-color: #2a3056; color: white;" target="_blank">
+                <div class="h-100 d-inline-flex align-items-center py- ms-4">
+                    <a href="https://janolijournals.org/" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;" target="_blank">
                         <small class="fa fa-file-upload me-2"></small>
                         <small>Paper Submission</small>
                     </a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <div class="h-100 d-inline-flex align-items-center py- me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
                     <small>+91-8854005488</small>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center">
+                <div class="h-100 d-inline-flex align-items-center me-4">
                     <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-sm-square rounded-circle text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    {% if 'username' in session %}
+                        <div class="dropdown">
+                            <button class="btn btn-sm py-1 px-2 dropdown-toggle" style="background-color: #2a3056; color: white;" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <small class="fa fa-user me-2"></small>
+                                <small>{{ session['username'] }}</small>
+                            </button>
+                        </div>
+                    {% else %}
+                        <a href="/login" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;">
+                            <small class="fa fa-sign-in-alt me-2"></small>
+                            <small>Login</small>
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
