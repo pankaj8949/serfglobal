@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from routes.foundation import foundation_bp
@@ -9,25 +8,22 @@ from routes.fellowship_awards import fellowship_awards_bp
 from routes.membership import membership_bp
 from routes.contact import contact_bp
 from routes.payment import payment_bp
+from supabase import create_client, Client
+import os
+from dotenv import load_dotenv
 
-db = SQLAlchemy()
+load_dotenv()  # Load environment variables from .env file
+
+url = os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
+
+if not url or not key:
+    raise ValueError("Missing SUPABASE_URL or SUPABASE_KEY environment variables")
+
+supabase = create_client(url, key)
 
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:serfglobalauth@db.uyanofddigzsbpxarrci.supabase.co:5432/postgres" 
-
-db.init_app(app)
-
-class SupaUser(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    fullname = db.Column(db.String, nullable=False)
-    username = db.Column(db.String, unique=True, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
-    gender = db.Column(db.String, nullable=False)
-    password = db.Column(db.String, nullable=False)
-
-with app.app_context():
-    db.create_all()  
 app.secret_key = 'serfglobal_2024secretkey'
 
 # Register Blueprints
@@ -38,6 +34,7 @@ app.register_blueprint(fellowship_awards_bp)
 app.register_blueprint(membership_bp)
 app.register_blueprint(contact_bp)
 app.register_blueprint(payment_bp)
+
 @app.errorhandler(404)
 def PageNotFound(e):
     return render_template("pages/404.html"), 404
@@ -62,34 +59,29 @@ def register():
             flash('Passwords do not match', 'error')
             return redirect(url_for('register'))
 
-        # Check if username already exists
-        existing_user = SupaUser.query.filter_by(username=username).first()
-        if existing_user:
-            flash('This user already exists, please try to login', 'error')
-            return redirect(url_for('register'))
-
-        # Check if email already exists
-        existing_email = SupaUser.query.filter_by(email=email).first()
-        if existing_email:
-            flash('This email is already registered, please use a different email', 'error')
-            return redirect(url_for('register'))
-
-        # Create new user with hashed password
-        new_user = SupaUser(
-            fullname=fullname,
-            username=username,
-            email=email,
-            gender=gender,
-            password=generate_password_hash(password, method='pbkdf2:sha256')
-        )
-        
         try:
-            db.session.add(new_user)
-            db.session.commit()
+            # Check if user exists
+            user = supabase.table('users').select('*').eq('email', email).execute()
+            if user.data:
+                flash('Email already registered', 'error')
+                return redirect(url_for('register'))
+
+            # Create new user
+            hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
+            user_data = {
+                'fullname': fullname,
+                'username': username,
+                'email': email,
+                'gender': gender,
+                'password': hashed_password
+            }
+            
+            result = supabase.table('users').insert(user_data).execute()
+            
             flash('Registration successful! Please login.', 'success')
             return redirect(url_for('login'))
+
         except Exception as e:
-            db.session.rollback()
             flash(f'An error occurred: {str(e)}', 'error')
             return redirect(url_for('register'))
 
@@ -98,39 +90,40 @@ def register():
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        username = request.form.get('username')
+        email = request.form.get('email')
         password = request.form.get('password')
         remember = request.form.get('remember-me')
 
-        # Find user by username
-        user = SupaUser.query.filter_by(username=username).first()
-
-        # Check if user exists and password is correct
-        if user and check_password_hash(user.password, password):
-            # Store user info in session
-            session['user_id'] = user.id
-            session['username'] = user.username
+        try:
+            # Find user by email
+            user = supabase.table('users').select('*').eq('email', email).execute()
             
-            # If remember me is checked, set permanent session
-            if remember:
-                session.permanent = True
+            if user.data and check_password_hash(user.data[0]['password'], password):
+                # Store user info in session
+                session['user_id'] = user.data[0]['id']
+                session['username'] = user.data[0]['username']
+                
+                # If remember me is checked, set permanent session
+                if remember:
+                    session.permanent = True
 
-            flash('Login successful!', 'success')
-            return redirect(url_for('Home'))
-        else:
-            flash('Invalid username or password', 'error')
+                flash('Login successful!', 'success')
+                return redirect(url_for('Home'))
+            else:
+                flash('Invalid email or password', 'error')
+                return redirect(url_for('login'))
+
+        except Exception as e:
+            flash(f'An error occurred: {str(e)}', 'error')
             return redirect(url_for('login'))
 
     return render_template("auth/login.html")
 
-# Add a logout route
 @app.route('/logout')
 def logout():
-    # Clear the session
     session.clear()
     return redirect(url_for('login'))
 
-# Optional: Add a decorator to protect routes that require login
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -139,7 +132,6 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# Example of using the login_required decorator:
 @app.route('/profile')
 @login_required
 def profile():
