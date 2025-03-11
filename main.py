@@ -61,7 +61,7 @@ def register():
 
         try:
             # Check if user exists
-            user = supabase.table('users').select('*').eq('email', email).execute()
+            user = supabase.table('supa_user').select('*').eq('email', email).execute()
             if user.data:
                 flash('Email already registered', 'error')
                 return redirect(url_for('register'))
@@ -76,7 +76,7 @@ def register():
                 'password': hashed_password
             }
             
-            result = supabase.table('users').insert(user_data).execute()
+            result = supabase.table('supa_user').insert(user_data).execute()
             
             flash('Registration successful! Please login.', 'success')
             return redirect(url_for('login'))
@@ -90,30 +90,32 @@ def register():
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email')
+        username_or_email = request.form.get('username_or_email')
         password = request.form.get('password')
         remember = request.form.get('remember-me')
 
         try:
-            # Find user by email
-            user = supabase.table('users').select('*').eq('email', email).execute()
+            user = supabase.table('supa_user')\
+                .select('*')\
+                .or_(f'email.eq.{username_or_email},username.eq.{username_or_email}')\
+                .execute()
             
             if user.data and check_password_hash(user.data[0]['password'], password):
                 # Store user info in session
                 session['user_id'] = user.data[0]['id']
                 session['username'] = user.data[0]['username']
                 
-                # If remember me is checked, set permanent session
                 if remember:
                     session.permanent = True
 
                 flash('Login successful!', 'success')
                 return redirect(url_for('Home'))
             else:
-                flash('Invalid email or password', 'error')
+                flash('Invalid username/email or password', 'error')
                 return redirect(url_for('login'))
 
         except Exception as e:
+            print(f"Login error: {str(e)}")  # Debug print
             flash(f'An error occurred: {str(e)}', 'error')
             return redirect(url_for('login'))
 
