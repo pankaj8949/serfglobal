@@ -17,10 +17,6 @@ membership_bp = Blueprint("membership", __name__)
 def MembershipBenifits():
     return render_template("screens/membership/m_benifits.html")
 
-@membership_bp.route("/membership-details")
-def MembershipDetails():
-    return render_template("screens/membership/m_details.html")
-
 @membership_bp.route("/online-application", methods=['GET', 'POST'])
 def OnlineApplication():
     if request.method == 'POST':
