@@ -6,21 +6,458 @@
     <div class="container py-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">Management Team</h1>
         <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase">
+                <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Management Team</li>
+            </ol>
         </nav>
     </div>
 </div>
 <!-- Page Header End -->
 
-<!-- Team Categories Start -->
-<div class="container-fluid bg-light p-0">
-    <div class="row g-0">
-        <div class="col text-center p-3 category-mentor">Mentor</div>
-        <div class="col text-center p-3">Chief Advisor</div>
-        <div class="col text-center p-3">Advisor</div>
-        <div class="col text-center p-3">Journals Planning Committee</div>
-        <div class="col text-center p-3">Working Committee</div>
+<!-- Category Navigation -->
+<div class="container-fluid py-3 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <ul class="nav nav-pills" id="teamCategories">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#mentors">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chief-advisors">Chief Advisors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#advisors">Advisors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journal-committee">Journal Planning Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conference-committee">Conference Planning Committee</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Team Categories End -->
+
+<!-- Team Members Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <!-- Mentors Section -->
+        <div id="mentors" class="team-section mb-5">
+            <h2 class="text-center mb-4">Mentors</h2>
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-1.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Sanjeev Kumar</h5>
+                            <small>Maharaja Suhel Dev University, Azamgarh, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-1.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Sanjay Chaudhary</h5>
+                            <small>Dr Bhimrao Ambedkar University, Agra, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-1.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Dorota Jelonek</h5>
+                            <small>Czestochowa University of Technology, Czestochowa, Poland</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-1.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Anna Dunay</h5>
+                            <small>John Von Neumann University, Hungary</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-1.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Manu Pratap Singh</h5>
+                            <small>Dr Bhimrao Ambedkar University, Agra, India</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Chief Advisors Section -->
+        <div id="chief-advisors" class="team-section mb-5">
+            <h2 class="text-center mb-4">Chief Advisors</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-2.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. Sarah Johnson</h5>
+                            <small>Dean of Research, MIT</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-2.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Sunder Lal</h5>
+                            <small>Purvanchal University, Jaunpur, India</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Advisors Section -->
+        <div id="advisors" class="team-section mb-5">
+            <h2 class="text-center mb-4">Advisors</h2>
+            <div class="row g-4">
+              
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-3.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) U S Rana</h5>
+                            <small>D A V (PG) College, Dehradun, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-3.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Mamta Chahar</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Journal Planning Committee Section -->
+        <div id="journal-committee" class="team-section mb-5">
+            <h2 class="text-center mb-4">Journal Planning Committee</h2>
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  Ilona Paweloszek</h5>
+                            <small>Czestochowa University of Technology</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Narendra Kumar</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Naveen Kumar Sharma</h5>
+                            <small>IIMT, Noida, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Sanjeet Kumar</h5>
+                            <small>LNCT, Bhopal, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Indu Sharma</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Anirudh Gupta</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Krishna Yadav</h5>
+                            <small>JECRC University, Jaipur, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  A K Saini</h5>
+                            <small>ICFAI University, Jaipur, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Yogendra Rajoria</h5>
+                            <small>K R Mangalam University, Sohna, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  Chandra Mohan</h5>
+                            <small>K R Mangalam University, Sohna, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Neeraj Khare</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Conference Committee Section -->
+        <div id="conference-committee" class="team-section mb-5">
+            <h2 class="text-center mb-4">Conference Planning Committee</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Dr. Lisa Chen</h5>
+                            <small>Project Coordinator</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  Paula Bajdor</h5>
+                            <small>Czestochowa University of Technology, Czestochowa, Poland</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Yogendra Rajoria</h5>
+                            <small>K R Mangalam University, Sohna, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  Chandra Mohan</h5>
+                            <small>K R Mangalam University, Sohna, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Indu Sharma</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Anirudh Gupta</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Krishna Yadav</h5>
+                            <small>JECRC University, Jaipur, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-4.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr)  A K Saini</h5>
+                            <small>ICFAI University, Jaipur, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Narendra Kumar</h5>
+                            <small>NIET, NIMS University, Jaipur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Naveen Kumar Sharma</h5>
+                            <small>IIMT, Noida, India</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/team-5.jpg') }}">
+                        </div>
+                        <div class="text-center p-4 bg-light">
+                            <h5 class="fw-bold mb-0">Prof. (Dr) Sanjeet Kumar</h5>
+                            <small>LNCT, Bhopal, India</small>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team Members End -->
 
 {% endblock %}

@@ -9,7 +9,3 @@ def Foundation():
 @foundation_bp.route("/management-team")
 def ManagementTeam():
     return render_template("screens/foundation/management_team.html")
-
-@foundation_bp.route("/messages")
-def Messages():
-    return render_template("screens/foundation/messages.html")

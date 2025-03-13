@@ -4,8 +4,12 @@
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Membership Benifits</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Membership Benefits</h1>
         <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb text-uppercase">
+                <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Membership Benefits</li>
+            </ol>
         </nav>
     </div>
 </div>
@@ -15,42 +19,81 @@
 <div class="container-xxl py-1">
     <div class="container">
         <div class="col-lg-12">
-            <p class="mb-4">
+            <p class="mb-4 text-dark" style="font-size: 16px;">
                 Shanti Educational Research Foundation (SERF) is committed to fostering excellence in research,
                 education, and professional development. We offer two types of membership—Annual Membership and Lifetime
                 Membership—each providing a range of exclusive benefits related to publication, international
                 conferences, and award nominations.
             </p>
+
+            <!-- Membership Types -->
             <div class="mb-4">
-                <button class="btn btn-primary w-100 mb-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#termMembershipDetails" aria-expanded="false" aria-controls="termMembershipDetails">
-                    Term Membership Benefits
+                <button class="btn w-100 mb-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#lifetimeMembership" aria-expanded="false"
+                    aria-controls="lifetimeMembership" 
+                    style="background-color: #2a3056; color: white;">
+                    Lifetime Membership
                 </button>
-                <div class="collapse" id="termMembershipDetails">
-                    <div class="card card-body">
-                        Eligibility: Open to individuals who wish to work with SERF for a fixed term. <br>
-                        Validity: membership fee for 5 years <br>
-                        Fees: 5000.00 (Indian Applicants) <br>
+                <div class="collapse show" id="lifetimeMembershipDetails">
+                    <div class="card card-body text-dark" style="font-size: 15px; line-height: 1.6;">
+                        <strong>Eligibility:</strong> Open to academicians, researchers, industry professionals, and students. <br>
+                        <strong>Validity:</strong> One time in life from the date of enrolment. <br>
+                        <strong>Fees:</strong> ₹8000.00 (Indian Applicants) <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $300.00 (Non-Indian Applicants) <br>
+                        <br>
+                        <strong>Publication Benefits:</strong> <br>
+                        • 50% discount on publication charges for JANOLI International Journals. <br>
+                        • Priority in the processing of research papers for peer review. <br>
+                        • Free access to select published articles and research papers. <br>
+                        • Assistance with manuscript formatting and adherence to journal guidelines. <br>
+                        • Opportunity to receive expert feedback on submitted research papers before final review. <br>
+                        <br>
+                        <strong>International Conference Participation:</strong> <br>
+                        • 20% discount on conference registration fees for all SERF-organized international conferences. <br>
+                        • Exclusive invitations to SERF-hosted workshops, seminars, and networking sessions. <br>
+                        • Access to post-conference proceedings and recorded sessions for future reference. <br>
+                        • Special recognition for the best presentations and research contributions. <br>
+                        <br>
+                        <strong>Awards & Recognition:</strong> <br>
+                        • Eligibility to be nominated for all annual academic awards. <br>
+                        • Consideration for editorial/ reviewer board member in JANOLI International Journals and Abhi International Journals. <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button class="btn w-100 mb-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#termMembership" aria-expanded="false" 
+                    aria-controls="termMembership"
+                    style="background-color: #2a3056; color: white;">
+                    Term Membership
+                </button>
+                <div class="collapse" id="termMembership">
+                    <div class="card card-body text-dark" style="font-size: 15px; line-height: 1.6;">
+                        <strong>Eligibility:</strong> Open to individuals who wish to work with SERF for a fixed term. <br>
+                        <strong>Validity:</strong> membership fee for 5 years <br>
+                        <strong>Fees:</strong> 5000.00 (Indian Applicants) <br>
                         &nbsp; &nbsp; &nbsp; &nbsp; : $210.00 (Non-Indian Applicants) <br>
                         <br>
-                        Publication Benefits: <br>
+                        <strong>Publication Benefits:</strong> <br>
                         • 50% discount on publication charges for JANOLI International Journals <br>
                         • Complimentary editing and proofreading support for submitted manuscripts. <br>
                         • Dedicated research guidance for improving publication success rates. <br>
                         <br>
-                        International Conference Participation: <br>
+                        <strong>International Conference Participation:</strong> <br>
                         • 15% discount on conference registration fees for all SERF-organized international conferences
                         (India/ abroad). <br>
                         • Complimentary access to select SERF workshops and networking events. <br>
                         • Opportunity to serve as a session chair or keynote speaker at SERF conferences. <br>
                         • Personalized mentorship for research paper submissions and conference presentations. <br>
                         • Exclusive access to premium conference materials, including expert panel discussions. <br>
-                        Awards & Recognition: <br>
+                        <br>
+                        <strong>Awards & Recognition:</strong> <br>
                         • Automatic consideration for awards in all categories. <br>
                         • Lifetime members' research contributions will be featured in an annual SERF publication
                         showcase. <br>
                         • Name displayed on the SERF website as a term Member and Contributor. <br>
-                        Additional Membership Privileges: <br>
+                        <strong>Additional Membership Privileges:</strong> <br>
                         • Access to a global network of researchers and professionals. <br>
                         • Opportunities to collaborate on funded research projects. <br>
                         • Exclusive access to research grants and funding opportunities provided by SERF. <br>
@@ -62,86 +105,76 @@
                     </div>
                 </div>
             </div>
+
             <div class="mb-4">
-                <button class="btn btn-primary w-100 mb-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#lifetimeMembershipDetails" aria-expanded="false"
-                    aria-controls="lifetimeMembershipDetails">
-                    Lifetime Membership Benefits
-                </button>
-                <div class="collapse" id="lifetimeMembershipDetails">
-                    <div class="card card-body">
-                        Eligibility: Open to academicians, researchers, industry professionals, and students. <br>
-                        Validity: One time in life from the date of enrolment. <br>
-                        Fees: 8000.00 (Indian Applicants) <br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; : $300.00 (Non-Indian Applicants) <br>
-                        <br>
-                        Publication Benefits: <br>
-                        • 50% discount on publication charges for JANOLI International Journals. <br>
-                        • Priority in the processing of research papers for peer review. <br>
-                        • Free access to select published articles and research papers. <br>
-                        • Assistance with manuscript formatting and adherence to journal guidelines. <br>
-                        • Opportunity to receive expert feedback on submitted research papers before final review. <br>
-                        <br>
-                        International Conference Participation: <br>
-                        • 20% discount on conference registration fees for all SERF-organized international conferences.
-                        <br>
-                        • Exclusive invitations to SERF-hosted workshops, seminars, and networking sessions. <br>
-                        • Access to post-conference proceedings and recorded sessions for future reference. <br>
-                        • Special recognition for the best presentations and research contributions. <br>
-                        Awards & Recognition: <br>
-                        <br>
-                        • Eligibility to be nominated for all annual academic awards. <br>
-                        • Consideration for editorial/ reviewer board member in JANOLI International Journals and Abhi
-                        International Journals.. <br>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                <button class="btn btn-primary w-100 mb-2" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#annualMembershipDetails" aria-expanded="false"
-                    aria-controls="annualMembershipDetails">
-                    Annual Membership Benefits ( During conferences only )
+                <button class="btn w-100 mb-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#annualMembership" aria-expanded="false"
+                    aria-controls="annualMembership"
+                    style="background-color: #2a3056; color: white;">
+                    Annual Membership (During conferences only)
                 </button>
                 <div class="collapse" id="annualMembershipDetails">
-                    <div class="card card-body">
-                        Eligibility: Open to academicians, researchers, industry professionals, and students. <br>
-                        Validity: One year from the date of enrolment. <br>
-                        Fees: 1000.00 (Indian Applicants) <br>
+                    <div class="card card-body text-dark" style="font-size: 15px; line-height: 1.6;">
+                        <strong>Eligibility:</strong> Open to academicians, researchers, industry professionals, and students. <br>
+                        <strong>Validity:</strong> One year from the date of enrolment. <br>
+                        <strong>Fees:</strong> 1000.00 (Indian Applicants) <br>
                         &nbsp; &nbsp; &nbsp; &nbsp; : $100.00 (Non-Indian Applicants) <br>
                         <br>
-                        Publication Benefits: <br>
+                        <strong>Publication Benefits:</strong> <br>
                         • 10% discount on publication charges for JANOLI International Journals. <br>
                         • Priority processing of research papers for peer review. <br>
                         • Opportunity to receive expert feedback on submitted research papers before final review. <br>
                         <br>
-                        International Conference Participation: <br>
+                        <strong>International Conference Participation:</strong> <br>
                         • 10% discount on conference registration fees for all SERF-organized international conferences.
                         <br>
                         • Exclusive invitations to SERF-hosted workshops, seminars, and networking sessions. <br>
                         • Opportunity to present research at SERF-sponsored events with reduced processing fees. <br>
                         • Access to post-conference proceedings and recorded sessions for future reference. <br>
                         • Special recognition for the best presentations and research contributions. <br>
-                        Awards & Recognition: <br>
                         <br>
+                        <strong>Awards & Recognition:</strong> <br>
                         • Eligibility to be nominated for all annual academic awards. <br>
-                        • Consideration for “Best Paper Award” at SERF conferences.
+                        • Consideration for "Best Paper Award" at SERF conferences.
                         • Recognition on the SERF website for outstanding contributions.
                         • Certificate of Appreciation for active participation in SERF activities.
                     </div>
                 </div>
             </div>
-            <p class="mb-4">
-                Account details: <br>
-                Account holder: Shanti Educational Research Foundation <br>
-                Name of Bank: Canara Bank <br>
-                Branch: Heera Path, Mansarovar, Jaipur <br>
-                Account number: 120002559652 <br>
-                IFSC code: CNRB0002794 <br>
 
-            </p>
+            <!-- Bank Details -->
+            <div class="card mt-4">
+                <div class="card-body text-dark" style="font-size: 15px; line-height: 1.6;">
+                    <h5 class="card-title mb-3" style="color: #2a3056;">Account Details:</h5>
+                    <strong>Account Holder:</strong> Shanti Educational Research Foundation <br>
+                    <strong>Bank Name:</strong> Canara Bank <br>
+                    <strong>Branch:</strong> Heera Path, Mansarovar, Jaipur <br>
+                    <strong>Account Number:</strong> 120002559652 <br>
+                    <strong>IFSC Code:</strong> CNRB0002794 <br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <!-- Membership Benefits End -->
+
+<style>
+    .card {
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .btn:hover {
+        opacity: 0.9;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    strong {
+        color: #2a3056;
+    }
+</style>
 
 {% endblock %}

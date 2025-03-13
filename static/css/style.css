@@ -629,4 +629,69 @@
     box-shadow: 0 0 0 0.25rem rgba(158, 0, 93, 0.25) !important;
 }
 
+.nav-pills .nav-link {
+    color: white;
+    border-radius: 0;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
 
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: #2a3056;
+    color: white;
+}
+
+.team-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.team-item:hover {
+    transform: translateY(-5px);
+}
+
+.team-item img {
+    transition: all 0.3s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-section h2 {
+    color: #2a3056;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.team-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #2a3056;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .nav-pills .nav-link {
+        white-space: nowrap;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .team-item {
+        margin-bottom: 20px;
+    }
+}
