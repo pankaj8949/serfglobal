@@ -695,3 +695,58 @@
         margin-bottom: 20px;
     }
 }
+
+ /* Team item and image sizing */
+ .team-item {
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-item .position-relative {
+    height: 300px; /* Fixed height for image container */
+    width: 100%;
+    overflow: hidden;
+}
+
+.team-item img.img-fluid {
+    width: 100%;
+    height: 300px; /* Same height as container */
+    object-fit: cover; /* This ensures images cover the area without distortion */
+    object-position: center; /* Centers the image */
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.team-item:hover img.img-fluid {
+    transform: scale(1.1);
+}
+
+/* Text container styling */
+.team-item .text-center {
+    padding: 1.5rem !important;
+    background: #f8f9fa;
+}
+
+.team-item h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-item small {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-item .position-relative {
+        height: 250px; /* Slightly smaller on mobile */
+    }
+
+    .team-item img.img-fluid {
+        height: 250px;
+    }
+}
