@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <title>SERF Global</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta
+        content="serf serglobal, serf global, serf global foundation, serf global journals, serf global conferences, serf global fellowship, serf global awards, serf global membership"
+        name="keywords">
+    <meta
+        content="SERF Global is a non-profit organization that promotes multi-disciplinary research in Science, Technology, and Management."
+        name="description">
 
     <!-- Favicon -->
     <link href="{{ url_for('static', filename='_img/favicon.ico') }}" rel="icon">
@@ -14,7 +18,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -23,7 +29,8 @@
     <!-- Libraries Stylesheet -->
     <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}"
+        rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
@@ -37,7 +44,7 @@
             .topbar-info {
                 display: none;
             }
-            
+
             .navbar-brand img {
                 height: 40px;
             }
@@ -85,7 +92,9 @@
         }
 
         /* Improve form elements responsiveness */
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             max-width: 100%;
         }
 
@@ -110,15 +119,233 @@
                 padding: 0.25rem 0.5rem !important;
                 font-size: 0.875rem !important;
             }
-            
-            .btn-sm + .btn-sm {
+
+            .btn-sm+.btn-sm {
                 margin-left: 5px;
             }
-            
-            .btn-sm .fa, 
-            .btn-sm .fas, 
+
+            .btn-sm .fa,
+            .btn-sm .fas,
             .btn-sm .far {
                 font-size: 1.1rem;
+            }
+        }
+
+        /* Improved Footer Styles */
+        .footer {
+            background-color: #1a1a2e !important;
+            color: #f0f0f0 !important;
+        }
+
+        .footer h5 {
+            color: #ffffff !important;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer h5:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: #9e055d;
+        }
+
+        .footer p {
+            color: #d1d1d1 !important;
+            line-height: 1.8;
+        }
+
+        .footer .btn-link {
+            color: #d1d1d1 !important;
+            padding: 0.3rem 0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 15px;
+            display: block;
+        }
+
+        .footer .btn-link:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .footer .btn-link:hover {
+            color: #ffffff !important;
+            transform: translateX(5px);
+        }
+
+        .footer .btn-outline-light {
+            border-color: #9e055d;
+            color: #ffffff;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .footer .btn-outline-light:hover {
+            background-color: #9e055d;
+            border-color: #9e055d;
+        }
+
+        .footer .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .footer .border-bottom {
+            border-bottom: 1px dashed #9e055d !important;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .footer .border-bottom:hover {
+            color: #9e055d;
+        }
+
+        /* Improved Topbar Styles */
+        .topbar {
+            background: linear-gradient(135deg, #1a1a2e 0%, #4a4e69 100%);
+            color: #ffffff;
+            padding: 8px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .topbar a:hover {
+            color: #f0f0f0;
+        }
+
+        .topbar-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            padding: 5px 0;
+        }
+
+        .topbar-item i {
+            margin-right: 8px;
+            color: #9e055d;
+        }
+
+        .topbar-button {
+            background-color: #9e055d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .topbar-button:hover {
+            background-color: #7e044a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar-button i {
+            margin-right: 6px;
+            color: white;
+        }
+
+        .topbar-social {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .topbar-social a {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .topbar-social a:hover {
+            background-color: #9e055d;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Topbar */
+        .mobile-topbar {
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-topbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-topbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile-topbar-button {
+            background-color: #9e055d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-topbar-button i {
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .topbar-item {
+                margin-right: 10px;
+            }
+            
+            .topbar-button {
+                padding: 4px 8px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .mobile-topbar {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-topbar-left {
+                margin-bottom: 5px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .mobile-topbar-right {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -126,93 +353,102 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <img src="{{ url_for('static', filename='_img/weblogo.png') }}" alt="SERF Logo" style="width: 150px; height: auto;">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <img src="{{ url_for('static', filename='_img/weblogo.png') }}" alt="SERF Logo"
+            style="width: 150px; height: auto;">
     </div>
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid topbar p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-1 me-4">
-                    <small class="fa fa-envelope text-primary me-2"></small>
-                    <small><a href="mailto:serfjaipur@gmail.com" style="color: inherit; text-decoration: none;">serfjaipur@gmail.com</a></small>
+                <div class="topbar-item">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:serfjaipur@gmail.com">serfjaipur@gmail.com</a>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center py-">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small id="current-time">Loading...</small>
+                <div class="topbar-item">
+                    <i class="far fa-clock"></i>
+                    <span id="current-time">Loading...</span>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center py- ms-4">
-                    <a href="make-a-payment" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;" target="_blank">
-                        <small class="fa fa-credit-card me-2"></small>
-                        <small>Make A Payment</small>
-                    </a>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py- ms-4">
-                    <a href="https://janolijournals.org/" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;" target="_blank">
-                        <small class="fa fa-file-upload me-2"></small>
-                        <small>Paper Submission</small>
-                    </a>
-                </div>
+                <a href="make-a-payment" class="topbar-button" target="_blank">
+                    <i class="fa fa-credit-card"></i>
+                    <span>Make A Payment</span>
+                </a>
+                <a href="https://janolijournals.org/" class="topbar-button" target="_blank">
+                    <i class="fa fa-file-upload"></i>
+                    <span>Paper Submission</span>
+                </a>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py- me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+91-8854005488</small>
+                <div class="topbar-item">
+                    <i class="fa fa-phone-alt"></i>
+                    <span>+91-8854005488</span>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <div class="topbar-social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="h-100 d-inline-flex align-items-center">
+                <div class="topbar-item ms-3">
                     {% if 'username' in session %}
-                        <div class="dropdown">
-                            <button class="btn btn-sm py-1 px-2 dropdown-toggle" style="background-color: #2a3056; color: white;" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <small class="fa fa-user me-2"></small>
-                                <small>{{ session['username'] }}</small>
-                            </button>
-                        </div>
+                    <div class="dropdown">
+                        <button class="topbar-button dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                            <span>{{ session['username'] }}</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
                     {% else %}
-                        <a href="/login" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;">
-                            <small class="fa fa-sign-in-alt me-2"></small>
-                            <small>Login</small>
-                        </a>
+                    <a href="/login" class="topbar-button">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </a>
                     {% endif %}
                 </div>
             </div>
         </div>
 
-        <!-- Mobile view (new code) -->
-        <div class="row gx-0 d-lg-none">
-            <div class="col-12 px-3 py-2 text-end">
-                <!-- Payment Button -->
-                <a href="make-a-payment" class="btn btn-sm py-1 px-2 me-2" style="background-color: #2a3056; color: white;" target="_blank">
-                    <small class="fa fa-credit-card"></small>
+        <!-- Mobile view (improved) -->
+        <div class="d-lg-none mobile-topbar">
+            <div class="mobile-topbar-left">
+                <div class="topbar-item">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:serfjaipur@gmail.com">serfjaipur@gmail.com</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa fa-phone-alt"></i>
+                    <span>+91-8854005488</span>
+                </div>
+            </div>
+            <div class="mobile-topbar-right">
+                <a href="make-a-payment" class="mobile-topbar-button" target="_blank">
+                    <i class="fa fa-credit-card"></i>
                 </a>
-                
-                <!-- Paper Submission Button -->
-                <a href="https://janolijournals.org/" class="btn btn-sm py-1 px-2 me-2" style="background-color: #2a3056; color: white;" target="_blank">
-                    <small class="fa fa-file-upload"></small>
+                <a href="https://janolijournals.org/" class="mobile-topbar-button" target="_blank">
+                    <i class="fa fa-file-upload"></i>
                 </a>
-                
-                <!-- Login/User Button -->
                 {% if 'username' in session %}
-                    <div class="dropdown d-inline">
-                        <button class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;" type="button" id="mobileUserDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <small class="fa fa-user"></small>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileUserDropdown">
-                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
-                        </ul>
-                    </div>
+                <div class="dropdown d-inline">
+                    <button class="mobile-topbar-button" type="button" id="mobileUserDropdown" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileUserDropdown">
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
                 {% else %}
-                    <a href="/login" class="btn btn-sm py-1 px-2" style="background-color: #2a3056; color: white;">
-                        <small class="fa fa-sign-in-alt"></small>
-                    </a>
+                <a href="/login" class="mobile-topbar-button">
+                    <i class="fa fa-sign-in-alt"></i>
+                </a>
                 {% endif %}
             </div>
         </div>
@@ -276,23 +512,28 @@
 
     {% block body %} {% endblock %}
 
-    
+
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Serf Global</h5>
-                    <p>SERF: A platform to promote multi-disciplinary research in Science, Technology, and Management, is an innovative non-profit-making foundation for researchers</p>
+                    <h5 class="mb-4">Serf Global</h5>
+                    <p>SERF: A platform to promote multi-disciplinary research in Science, Technology, and Management,
+                        is an innovative non-profit-making foundation for researchers</p>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Link</h5>
+                    <h5 class="mb-4">Quick Link</h5>
                     <a class="btn btn-link" href="">Membership Benefits</a>
                     <a class="btn btn-link" href="">Membership Details</a>
                     <a class="btn btn-link" href="">Online Application</a>
@@ -300,12 +541,19 @@
                     <a class="btn btn-link" href="">Application</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Additional Links</h5>
+                    <h5 class="mb-4">Additional Links</h5>
                     <a class="btn btn-link" href="">Management Team</a>
                     <a class="btn btn-link" href="">Current Journal</a>
                     <a class="btn btn-link" href="">Upcoming Journals</a>
                     <a class="btn btn-link" href="">National Awards</a>
                     <a class="btn btn-link" href="">Global Awards</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Jaipur, Rajasthan, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91-8854005488</p>
+                    <p><i class="fa fa-envelope me-3"></i>serfjaipur@gmail.com</p>
+                    <p><i class="fa fa-clock me-3"></i>Mon-Fri: 9AM - 5PM</p>
                 </div>
             </div>
         </div>
@@ -316,7 +564,8 @@
                         &copy; <a class="border-bottom" href="/">Serf Global</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
-                        Designed by <a class="border-bottom" href="#">ReDevs</a>
+                        Designed by <a class="border-bottom" href="https://redevs.atmam.org" target="_blank"
+                            rel="noopener noreferrer">ReDevs</a>
                     </div>
                 </div>
             </div>
@@ -326,7 +575,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

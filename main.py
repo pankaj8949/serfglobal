@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, send_file, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from routes.foundation import foundation_bp
@@ -133,6 +133,18 @@ def login_required(f):
             return redirect(url_for('login'))
         return f(*args, **kwargs)
     return decorated_function
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_file('static/sitemap.xml', mimetype='application/xml')
+
+@app.route('/robots.txt')
+def robots():
+    return send_file('static/robots.txt', mimetype='text/plain')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('static/favicon.ico', mimetype='image/x-icon')
 
 @app.route('/profile')
 @login_required

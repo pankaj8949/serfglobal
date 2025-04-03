@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /profile/
+Disallow: /make-a-payment/
+Disallow: /logout/
+
+# Allow search engines to crawl public pages
+Allow: /foundation
+Allow: /management-team
+Allow: /current-journal
+Allow: /upcoming-journals
+Allow: /past-conferences
+Allow: /upcoming-conferences
+Allow: /national-awards
+Allow: /global-awards
+Allow: /application
+Allow: /membership-benifits
+Allow: /online-application
+Allow: /list-of-life-members
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://serfglobal.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10
