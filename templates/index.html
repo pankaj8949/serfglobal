@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 {% block body %}
   {% from 'components/team-card.html' import team_card %}
+  {% from 'components/project-card.html' import project_card %}
 
   <!-- Header Start -->
   <!-- 
@@ -33,7 +34,7 @@
           <p style="color: black; text-align: justify;">A platform to promote multi-disciplinary research in Science, Technology, and Management, is an innovative non-profit-making foundation for researchers/ academicians around the globe for research and developments which make this world a happy home for all living.</p>
         </div>
         <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
-          <img class="img-fluid rounded" src="{{ url_for('static', filename='_img/inner-banner.jpeg') }}" alt="SERF International" style="width: 100%; height: 100%; object-fit: cover;" />
+          <img class="img-fluid rounded" src="_img/inner-banner.jpeg" alt="SERF International" style="width: 100%; height: 100%; object-fit: cover;" />
         </div>
       </div>
     </div>
@@ -58,7 +59,7 @@
 
         <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
           <div class="position-relative" style="border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.2);">
-            <img src="{{ url_for('static', filename='_img/img-1.jpg') }}" alt="SERF International" class="img-fluid" style="width: 100%; border-radius: 15px; transform: scale(1.01);" />
+            <img src="_img/img-1.jpg" alt="SERF International" class="img-fluid" style="width: 100%; border-radius: 15px; transform: scale(1.01);" />
             <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); 
                       height: 50%; pointer-events: none;"></div>
           </div>
@@ -82,7 +83,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si1.png') }}" alt="Fast Service" style="width: 50px;" />
+                    <img src="_img/icons/si1.png" alt="Fast Service" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">Fast service</h5>
                   <p class="card-text" style="color: #555;">SERF publishes articles within 48 hrs as it has a wide team of reviewers</p>
@@ -95,7 +96,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si2.png') }}" alt="Publication Fees" style="width: 50px;" />
+                    <img src="_img/icons/si2.png" alt="Publication Fees" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">Publication Fees</h5>
                   <p class="card-text" style="color: #555;">Fees is very low. Online publication charges are xxxx Rs only</p>
@@ -108,7 +109,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si3.png') }}" alt="Expert Team" style="width: 50px;" />
+                    <img src="_img/icons/si3.png" alt="Expert Team" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">Expert team</h5>
                   <p class="card-text" style="color: #555;">SERF has board members from Top Institutes and University</p>
@@ -121,7 +122,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si4.png') }}" alt="E-Certificates" style="width: 50px;" />
+                    <img src="_img/icons/si4.png" alt="E-Certificates" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">E-Certificates</h5>
                   <p class="card-text" style="color: #555;">SERF provides e-certificates for all publishes articles within 4 hrs.</p>
@@ -134,7 +135,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si5.png') }}" alt="ISO" style="width: 50px;" />
+                    <img src="_img/icons/si5.png" alt="ISO" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">ISO</h5>
                   <p class="card-text" style="color: #555;">Uploading Soon</p>
@@ -147,7 +148,7 @@
               <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
                 <div class="card-body text-center p-4">
                   <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="{{ url_for('static', filename='_img/icons/si6.png') }}" alt="Google Searchable" style="width: 50px;" />
+                    <img src="_img/icons/si6.png" alt="Google Searchable" style="width: 50px;" />
                   </div>
                   <h5 class="card-title mt-3">Google Searchable</h5>
                   <p class="card-text" style="color: #555;">All publishes articles are searchable in different search Engine like Google</p>
@@ -162,37 +163,97 @@
   <!-- SERF features Section End -->
 
   <!-- Our Team Section Start -->
-  <div class="container-xxl py-5">
+  <div class="container">
     <div class="container">
-      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1200px;">
+      <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1200px;">
         <h1><span style="color: #000;">Our</span> <span style="color: #9e055d;">Team SERF India</span></h1>
         <div class="mx-auto" style="width: 100px; height: 5px; background-color: #9e055d; margin: 15px auto; border-radius: 10px;"></div>
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-3 justify-content-center">
           <!-- Dr. Sanjeev Kumar -->
-          {{ team_card('Dr. Sanjeev Kumar', 'Executive President', url_for('static', filename='_img/team/dr-sanjeev-sir.webp'), 'Jaipur, India') }}
+          {{ team_card('Dr. Sanjeev Kumar', 'Executive President', '_img/team/dr-sanjeev-sir.webp', 'Agra, India') }}
 
           <!-- Dr. Ilona Paweloszek -->
-          {{ team_card('Dr. Ilona Paweloszek', 'Executive Vice President', url_for('static', filename='_img/team/ilona.webp'), 'Czestochowa, Poland') }}
+          {{ team_card('Dr. Ilona Paweloszek', 'Executive Vice President', '_img/team/ilona.webp', 'Czestochowa, Poland') }}
 
           <!-- Dr. Alok Aggrawal -->
-          {{ team_card('Dr. Alok Aggrawal', 'Executive Vice President', url_for('static', filename='_img/team/alok.webp'), 'Jaipur, India') }}
-        </div>
-        
-        <div class="row g-4 justify-content-center mt-4">
+          {{ team_card('Dr. Alok Aggrawal', 'Executive Vice President', '_img/team/alok.webp', 'Dehradun, India') }}
+
           <!-- Dr. Yogendra Rajoria -->
-          {{ team_card('Dr. Yogendra Rajoria', 'Executive Vice President', url_for('static', filename='_img/team/yogendra-rajoria.jpg'), 'Jaipur, India') }}
+          {{ team_card('Dr. Yogendra Rajoria', 'Executive Vice President', '_img/team/yogendra-rajoria.jpg', 'Gurugram, India') }}
 
           <!-- Pradeep Upadhyay -->
-          {{ team_card('Dr. Pradeep Upadhyay', 'Executive Vice President', url_for('static', filename='_img/team/pradeep.png'), 'Jaipur, India') }}
+          {{ team_card('Prof. Pradeep Upadhyay', 'Executive Vice President', '_img/team/pradeep.png', 'Jaipur, India') }}
 
           <!-- Dr. Chandra Mohan -->
-          {{ team_card('Dr. Chandra Mohan', 'Executive Vice President', url_for('static', filename='_img/team/chandra-mohan.webp'), 'Jaipur, India') }}
-        </div>
+          {{ team_card('Dr. Chandra Mohan', 'Executive Vice President', '_img/team/chandra-mohan.webp', 'Gurugram, India') }}
+        </div>  
       </div>
     </div>
   </div>
   <!-- Our Team Section End -->
+
+    <!-- Upcoming Projects Section Start -->
+    <section class="bg-light py-5">
+      <div class="container-xxl project py-5">
+        <div class="container">
+          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+            <div class="section-title">
+              <h6>Coming Soon</h6>
+              <h2 class="mb-4">
+                Our Upcoming Projects
+              </h2>
+              <p>Exciting new solutions currently in development to serve the academic and research community.</p>
+            </div>
+          </div>
+  
+          <div class="row g-4">
+            <!-- Upcoming Project 1: BRAD Biochemical Research Lab -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+              {{ project_card(
+                icon="flask",
+                title="BRAD Biochemical Research Lab",
+                description="Advanced laboratory facilities for biochemical research with state-of-the-art equipment and analysis tools.",
+                features=["Molecular Analysis", "Protein Research"],
+                link="#",
+                status_class="warning",
+                status_text="Coming Q3 2023",
+                is_disabled=true
+              ) }}
+            </div>
+            
+            <!-- Upcoming Project 2: BRAD AI Integration Lab -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+              {{ project_card(
+                icon="robot",
+                title="BRAD AI Integration Lab",
+                description="Cutting-edge AI research facility focused on integrating artificial intelligence into scientific and management processes.",
+                features=["Machine Learning Models", "Process Automation"],
+                link="#",
+                status_class="warning",
+                status_text="Coming Q4 2023",
+                is_disabled=true
+              ) }}
+            </div>
+            
+            <!-- Upcoming Project 3: BRAD Data Analytics Lab -->
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+              {{ project_card(
+                icon="chart-bar",
+                title="BRAD Data Analytics Lab",
+                description="Specialized facility for big data processing, visualization, and analytics to support research and decision-making.",
+                features=["Big Data Processing", "Predictive Analytics"],
+                link="#",
+                status_class="warning",
+                status_text="Coming Q1 2024",
+                is_disabled=true
+              ) }}
+            </div>
+          </div>
+          <!-- Row End -->
+        </div>
+      </div>
+    </section>
 
   <!-- Team Size Stastistics Start -->
   <section id="team-size-statistics">
@@ -568,7 +629,7 @@
         <!-- Call for Papers -->
         <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
           <h3>Call for Papers</h3>
-          <img src="{{ url_for('static', filename='img/icons/1.png') }}" alt="Call for Papers" style="width: 60px; margin: 20px 0;" />
+          <img src="img/icons/1.png" alt="Call for Papers" style="width: 60px; margin: 20px 0;" />
           <div style="font-size: 5rem; color: black; font-weight: bold; margin: 15px 0;">
             24x7
             <span style="display: block; font-size: 1.2rem; font-weight: normal;">Working</span>
@@ -579,7 +640,7 @@
         <!-- Notification of Acceptance -->
         <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
           <h3>Notification of Acceptance</h3>
-          <img src="{{ url_for('static', filename='img/icons/2.png') }}" alt="Notification" style="width: 60px; margin: 20px 0;" />
+          <img src="img/icons/2.png" alt="Notification" style="width: 60px; margin: 20px 0;" />
           <div>
             <span style="color: #9e055d; font-size: 1.5rem; font-weight: bold;">Within</span>
             <div style="font-size: 5rem; font-weight: bold; color: #9e055d;">24</div>
@@ -591,7 +652,7 @@
         <!-- E-Certificates -->
         <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
           <h3>E-Certificates</h3>
-          <img src="{{ url_for('static', filename='img/icons/3.png') }}" alt="E-Certificates" style="width: 60px; margin: 20px 0;" />
+          <img src="img/icons/3.png" alt="E-Certificates" style="width: 60px; margin: 20px 0;" />
           <div>
             <span>Within</span>
             <div style="font-size: 3.5rem; font-weight: bold;">04</div>

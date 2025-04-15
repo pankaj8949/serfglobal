@@ -43,6 +43,10 @@ def PageNotFound(e):
 def Home():
     return render_template("index.html")
 
+@app.route('/<path:filename>')
+def static_files(filename):
+    return send_file(os.path.join(app.static_folder, filename))
+
 @app.route('/register', methods=['GET','POST'])
 def register():
     if request.method == 'POST':
@@ -133,18 +137,6 @@ def login_required(f):
             return redirect(url_for('login'))
         return f(*args, **kwargs)
     return decorated_function
-
-@app.route('/sitemap.xml')
-def sitemap():
-    return send_file('static/sitemap.xml', mimetype='application/xml')
-
-@app.route('/robots.txt')
-def robots():
-    return send_file('static/robots.txt', mimetype='text/plain')
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_file('static/favicon.ico', mimetype='image/x-icon')
 
 @app.route('/profile')
 @login_required

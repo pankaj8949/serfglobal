@@ -1,0 +1,27 @@
+{% macro project_card(icon, title, description, features, link, status="Active", status_class="success", status_text="Active", is_disabled=false) %}
+<div class="project-item bg-white rounded shadow p-3 h-100 position-relative overflow-hidden">
+  <div class="project-icon position-absolute" style="top: 15px; right: 15px; font-size: 4rem; opacity: 0.1;">
+    <i class="fas fa-{{ icon }}"></i>
+  </div>
+  <div class="text-center mb-3">
+    <i class="fas fa-{{ icon }} fa-4x txt-primary mb-3"></i>
+    <div class="mt-2">
+      <span class="badge bg-{{ status_class }} text-{{ 'white' if status_class == 'success' else 'dark' }} px-2 py-1">{{ status_text }}</span>
+    </div>
+  </div>
+  <div class="p-2">
+    <h4 class="mb-2">{{ title }}</h4>
+    <p class="mb-2">{{ description }}</p>
+    <ul class="small">
+      {% for feature in features %}
+      <li><i class="fa fa-{{ 'check' if not is_disabled else 'clock' }} txt-primary me-2"></i>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+    {% if is_disabled %}
+    <button class="btn btn-outline-primary py-1 px-3 mt-2" disabled>Coming Soon</button>
+    {% else %}
+    <a href="{{ link }}" aria-label="View Details" target="_blank" rel="noopener noreferrer" class="btn btn-inline-body py-2 px-4 mt-2">View Details</a>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %} 

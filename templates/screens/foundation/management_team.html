@@ -1,176 +1,227 @@
 {% extends 'layout.html' %}
 {% block body %}
-  {% from 'components/team-card.html' import team_card %}
+{% from 'components/team-card.html' import team_card %}
 
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <h1 class="display-3 text-white mb-3 animated slideInDown">Management Team</h1>
-      <nav aria-label="breadcrumb animated slideInDown">
-        <ol class="breadcrumb text-uppercase">
-          <li class="breadcrumb-item">
-            <a class="text-white" href="/">Home</a>
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Management Team</h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb text-uppercase">
+        <li class="breadcrumb-item">
+          <a class="text-white" href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Management Team</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Category Navigation -->
+<!-- <div class="container-fluid py-3 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <ul class="nav nav-pills" id="teamCategories">
+          <li class="nav-item">
+            <a class="nav-link active" href="#mentors">Mentors</a>
           </li>
-          <li class="breadcrumb-item text-white active" aria-current="page">Management Team</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <!-- Page Header End -->
-
-  <!-- Category Navigation -->
-  <div class="container-fluid py-3 bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-auto">
-          <ul class="nav nav-pills" id="teamCategories">
-            <li class="nav-item">
-              <a class="nav-link active" href="#mentors">Mentors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#chief-advisors">Chief Advisors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#advisors">Advisors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#journal-committee">Journal Planning Committee</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#conference-committee">Conference Planning Committee</a>
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#chief-advisors">Chief Advisors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#advisors">Advisors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#journal-committee">Journal Planning Committee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#conference-committee">Conference Planning Committee</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
+  </div> 
+</div>-->
 
-  <!-- Team Members Start -->
-  <div class="container-xxl py-5">
-    <div class="container">
-      <!-- Mentors Section -->
-      <div id="mentors" class="team-section mb-5">
-        <h2 class="text-center mb-4">Mentors</h2>
-        <div class="row g-4">
-          <!-- Prof. (Dr) Sanjay Chaudhary -->
-          {{ team_card('Prof. (Dr) Sanjay Chaudhary', 'Dr Bhimrao Ambedkar University', url_for('static', filename='_img/team/dr-sanjeev-sir.webp'), 'Agra, India') }}
+<!-- Team Members Start -->
+<div class="container-xxl py-5 ">
+  <div class="container">
 
-          <!-- Dorota Jelonek -->
-          {{ team_card('Prof. (Dr) Dorota Jelonek', 'Czestochowa University of Technology', url_for('static', filename='_img/team/dorota.webp'), 'Czestochowa, Poland') }}
+    <!-- Inspirations-->
+    <div id="inspirations" class="team-section mb-5">
+      <h2 class="text-center mb-4">Inspirations</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Shree Ram Babu -->
+        {{ team_card('Shree Ram Babu', '', '_img/team/shree-ram-babu.webp',
+        '') }}
 
-          <!-- Prof. (Dr) Anna Dunay -->
-          {{ team_card('Prof. (Dr) Anna Dunay', 'John Von Neumann University', url_for('static', filename='_img/team/anna.webp'), 'Budapest, Hungary') }}
+        <!-- Mr Umesh Chandra Upadhyay -->
+        {{ team_card('Mr Umesh Upadhyay', '', '_img/team/umesh-chandra.webp',
+        '') }}
 
-          <!-- Prof. (Dr) Manu Pratap Singh -->
-          {{ team_card('Prof. (Dr) Manu Pratap Singh', 'Dr Bhimrao Ambedkar University', url_for('static', filename='_img/team/manu.webp'), 'Agra, India') }}
-        </div>
+        <!-- Mr Lakhmi Chand -->
+        {{ team_card('Mr Lakhmi Chand', '', '_img/team/lakhmi-chand.webp', '')
+        }}
+
       </div>
+    </div>
+    <!-- Mentors Section -->
+    <div id="mentors" class="team-section mb-5">
+      <h2 class="text-center mb-4">Mentors</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Prof. (Dr) Sanjay Chaudhary -->
+        {{ team_card('Prof. (Dr) Sanjay Chaudhary', 'Dr Bhimrao Ambedkar University', '_img/team/dr-sanjeev-sir.webp',
+        'Agra, India') }}
 
-      <!-- Chief Advisors Section -->
-      <div id="chief-advisors" class="team-section mb-5">
-        <h2 class="text-center mb-4">Chief Advisors</h2>
-        <div class="row g-4">
-          <!-- Prof. Sarah Johnson -->
-          {{ team_card('Prof. Sarah Johnson', 'Dean of Research, MIT', url_for('static', filename='_img/team/sarah.webp'), 'USA') }}
+        <!-- Dorota Jelonek -->
+        {{ team_card('Prof. (Dr) Dorota Jelonek', 'Czestochowa University of Technology', 'https://firebasestorage.googleapis.com/v0/b/conference-340f2.appspot.com/o/1733767342191?alt=media&token=e9484484-1e0a-42e8-9dce-90ab914fa3db',
+        'Czestochowa, Poland') }}
 
-          <!-- Prof. (Dr) Sunder Lal -->
-          {{ team_card('Prof. (Dr) Sunder Lal', 'Purvanchal University', url_for('static', filename='_img/team/sunder.webp'), 'Jaunpur, India') }}
-        </div>
+        <!-- Prof. (Dr) Anna Dunay -->
+        {{ team_card('Prof. (Dr) Anna Dunay', 'John Von Neumann University', 'https://firebasestorage.googleapis.com/v0/b/conference-340f2.appspot.com/o/1733507378011?alt=media&token=d0e92843-c134-4e2f-a05c-1c5af13fce79', 'Budapest, Hungary')
+        }}
+
+        <!-- Prof. (Dr) Manu Pratap Singh -->
+        {{ team_card('Prof. (Dr) Manu Pratap Singh', 'Dr Bhimrao Ambedkar University', '_img/team/manu.webp', 'Agra,
+        India') }}
       </div>
+    </div>
 
-      <!-- Advisors Section -->
-      <div id="advisors" class="team-section mb-5">
-        <h2 class="text-center mb-4">Advisors</h2>
-        <div class="row g-4">
-          <!-- Prof. (Dr) U S Rana -->
-          {{ team_card('Prof. (Dr) U S Rana', 'D A V (PG) College', url_for('static', filename='_img/team/us-rana.webp'), 'Dehradun, India') }}
+    <!-- Chief Advisors Section -->
+    <div id="chief-advisors" class="team-section mb-5">
+      <h2 class="text-center mb-4">Chief Advisors</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Prof. Sarah Johnson -->
+        {{ team_card('Prof. Sarah Johnson', 'Dean of Research, MIT', '_img/team/sarah.webp', 'USA') }}
 
-          <!-- Prof. (Dr) Mamta Chahar -->
-          {{ team_card('Prof. (Dr) Mamta Chahar', 'NIET, NIMS University', url_for('static', filename='_img/team/mamta.webp'), 'Jaipur, India') }}
-        </div>
+        <!-- Prof. (Dr) Sunder Lal -->
+        {{ team_card('Prof. (Dr) Sunder Lal', 'Purvanchal University', '_img/team/sunder.webp', 'Jaunpur, India') }}
       </div>
+    </div>
 
-      <!-- Journal Planning Committee Section -->
-      <div id="journal-committee" class="team-section mb-5">
-        <h2 class="text-center mb-4">Journal Planning Committee</h2>
-        <div class="row g-4">
-          <!-- Prof. (Dr) Ilona Paweloszek -->
-          {{ team_card('Prof. (Dr) Ilona Paweloszek', 'Czestochowa University of Technology', url_for('static', filename='_img/team/ilona.webp'), 'Poland') }}
+    <!-- Advisors Section -->
+    <div id="advisors" class="team-section mb-5">
+      <h2 class="text-center mb-4">Advisors</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Prof. (Dr) U S Rana -->
+        {{ team_card('Prof. (Dr) U S Rana', 'D A V (PG) College', '_img/team/us-rana.webp', 'Dehradun, India') }}
 
-          <!-- Prof. (Dr) Narendra Kumar -->
-          {{ team_card('Prof. (Dr) Narendra Kumar', 'NIET, NIMS University', url_for('static', filename='_img/team/dr-narendra-kumar.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) Mamta Chahar -->
+        {{ team_card('Prof. (Dr) Mamta Chahar', 'NIET, NIMS University', '_img/team/mamta.webp', 'Jaipur, India') }}
 
-          <!-- Prof. (Dr) Naveen K. Sharma -->
-          {{ team_card('Prof. (Dr) Naveen K. Sharma', 'IIMT', url_for('static', filename='_img/team/naveen.webp'), 'Noida, India') }}
-
-          <!-- Prof. (Dr) Sanjeet Kumar -->
-          {{ team_card('Prof. (Dr) Sanjeet Kumar', 'LNCT', url_for('static', filename='_img/team/sanjeet.webp'), 'Bhopal, India') }}
-
-          <!-- Prof. (Dr) Indu Sharma -->
-          {{ team_card('Prof. (Dr) Indu Sharma', 'NIET, NIMS University', url_for('static', filename='_img/team/indu-sharma.webp'), 'Jaipur, India') }}
-
-          <!-- Prof. (Dr) Anirudh Gupta -->
-          {{ team_card('Prof. (Dr) Anirudh Gupta', 'NIET, NIMS University', url_for('static', filename='_img/team/anirudh-gupta.webp'), 'Jaipur, India') }}
-
-          <!-- Prof. (Dr) Krishna Yadav -->
-          {{ team_card('Prof. (Dr) Krishna Yadav', 'JECRC University', url_for('static', filename='_img/team/krishna.webp'), 'Jaipur, India') }}
-
-          <!-- Prof. (Dr) A K Saini -->
-          {{ team_card('Prof. (Dr) A K Saini', 'ICFAI University', url_for('static', filename='_img/team/ak-saini.webp'), 'Jaipur, India') }}
-
-          <!-- Prof. (Dr) Yogendra Rajoria -->
-          {{ team_card('Prof. (Dr) Yogendra Rajoria', 'K R Mangalam University', url_for('static', filename='_img/team/yogendra.webp'), 'Sohna, India') }}
-
-          <!-- Prof. (Dr) Chandra Mohan -->
-          {{ team_card('Prof. (Dr) Chandra Mohan', 'K R Mangalam University', url_for('static', filename='_img/team/chandra.webp'), 'Sohna, India') }}
-
-          <!-- Prof. (Dr) Neeraj Khare -->
-          {{ team_card('Prof. (Dr) Neeraj Khare', 'NIET, NIMS University', url_for('static', filename='_img/team/neeraj.webp'), 'Jaipur, India') }}
-        
-        </div>
+        <!-- Prof. (Dr) Pradeep Upadhyay -->
+        {{ team_card('Prof. (Dr) Pradeep Upadhyay', 'NIET, NIMS University', '_img/team/pradeep.png', 'Jaipur, India')
+        }}
       </div>
+    </div>
 
-      <!-- Conference Committee Section -->
-      <div id="conference-committee" class="team-section mb-5">
-        <h2 class="text-center mb-4">Conference Planning Committee</h2>
-        <div class="row g-4">
+    <!-- Journal Planning Committee Section -->
+    <div id="journal-committee" class="team-section mb-5">
+      <h2 class="text-center mb-4">Journal Planning Committee</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Prof. (Dr) Ilona Paweloszek -->
+        {{ team_card('Prof. (Dr) Ilona Paweloszek', 'Czestochowa University of Technology', '_img/team/ilona.webp',
+        'Poland') }}
 
-          <!-- Dr. Lisa Chen -->
-          {{ team_card('Dr. Lisa Chen', 'Project Coordinator', url_for('static', filename='_img/team/lisa.webp'), 'USA') }}
+        <!-- Prof. (Dr) Narendra Kumar -->
+        {{ team_card('Prof. (Dr) Narendra Kumar', 'NIET, NIMS University', '_img/team/dr-narendra-kumar.webp', 'Jaipur,
+        India') }}
 
-          <!-- Prof. (Dr) Paula Bajdor -->
-          {{ team_card('Prof. (Dr) Paula Bajdor', 'Czestochowa University of Technology', url_for('static', filename='_img/team/paula.webp'), 'Czestochowa, Poland') }}
+        <!-- Prof. (Dr) Naveen K. Sharma -->
+        {{ team_card('Prof. (Dr) Naveen K. Sharma', 'IIMT', '_img/team/naveen.webp', 'Noida, India') }}
 
-          <!-- Yogendra Rajoria -->
-          {{ team_card('Yogendra Rajoria', 'K R Mangalam University', url_for('static', filename='_img/team/yogendra.webp'), 'Sohna, India') }}
+        <!-- Prof. (Dr) Sanjeet Kumar -->
+        {{ team_card('Prof. (Dr) Sanjeet Kumar', 'LNCT', '_img/team/sanjeet.webp', 'Bhopal, India') }}
 
-          <!-- Prof. (Dr) Chandra Mohan -->
-          {{ team_card('Prof. (Dr) Chandra Mohan', 'K R Mangalam University', url_for('static', filename='_img/team/chandra.webp'), 'Sohna, India') }}
+        <!-- Prof. (Dr) Indu Sharma -->
+        {{ team_card('Prof. (Dr) Indu Sharma', 'NIET, NIMS University', '_img/team/indu-sharma.webp', 'Jaipur, India')
+        }}
 
-          <!-- Prof. (Dr) Indu Sharma -->
-          {{ team_card('Prof. (Dr) Indu Sharma', 'NIET, NIMS University', url_for('static', filename='_img/team/indu-sharma.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) Anirudh Gupta -->
+        {{ team_card('Prof. (Dr) Anirudh Gupta', 'NIET, NIMS University', '_img/team/anirudh-gupta.webp', 'Jaipur,
+        India') }}
 
-          <!-- Prof. (Dr) Anirudh Gupta -->
-          {{ team_card('Prof. (Dr) Anirudh Gupta', 'NIET, NIMS University', url_for('static', filename='_img/team/anirudh-gupta.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) Krishna Yadav -->
+        {{ team_card('Prof. (Dr) Krishna Yadav', 'JECRC University', '_img/team/krishna.webp', 'Jaipur, India') }}
 
-          <!-- Prof. (Dr) Krishna Yadav -->
-          {{ team_card('Prof. (Dr) Krishna Yadav', 'JECRC University', url_for('static', filename='_img/team/krishna.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) A K Saini -->
+        {{ team_card('Prof. (Dr) A K Saini', 'ICFAI University', '_img/team/ak-saini.webp', 'Jaipur, India') }}
 
-          <!-- Prof. (Dr) A K Saini -->
-          {{ team_card('Prof. (Dr) A K Saini', 'ICFAI University', url_for('static', filename='_img/team/ak-saini.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) Yogendra Rajoria -->
+        {{ team_card('Prof. (Dr) Yogendra Rajoria', 'K R Mangalam University', '_img/team/yogendra-rajoria.jpg', 'Sohna,
+        India') }}
 
-          <!-- Prof. (Dr) Narendra Kumar -->
-          {{ team_card('Prof. (Dr) Narendra Kumar', 'NIET, NIMS University', url_for('static', filename='_img/team/dr-narendra-kumar.webp'), 'Jaipur, India') }}
+        <!-- Prof. (Dr) Chandra Mohan -->
+        {{ team_card('Prof. (Dr) Chandra Mohan', 'K R Mangalam University', '_img/team/chandra-mohan.webp', 'Sohna, India') }}
 
-          <!-- Prof. (Dr) Naveen K. Sharma -->
-          {{ team_card('Prof. (Dr) Naveen K. Sharma', 'IIMT', url_for('static', filename='_img/team/naveen.webp'), 'Noida, India') }}
+        <!-- Prof. (Dr) Neeraj Khare -->
+        {{ team_card('Prof. (Dr) Neeraj Khare', 'NIET, NIMS University', '_img/team/neeraj.webp', 'Jaipur, India') }}
 
-          <!-- Prof. (Dr) Sanjeet Kumar -->
-          {{ team_card('Prof. (Dr) Sanjeet Kumar', 'LNCT', url_for('static', filename='_img/team/sanjeet.webp'), 'Bhopal, India') }}
+      </div>
+    </div>
 
-        </div>
+    <!-- Conference Committee Section -->
+    <div id="conference-committee" class="team-section mb-5">
+      <h2 class="text-center mb-4">Conference Planning Committee</h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Dr. Lisa Chen -->
+        {{ team_card('Dr. Lisa Chen', 'Project Coordinator', '_img/team/lisa.webp', 'USA') }}
+
+        <!-- Prof. (Dr) Paula Bajdor -->
+        {{ team_card('Prof. (Dr) Paula Bajdor', 'Czestochowa University of Technology', '_img/team/paula.webp',
+        'Czestochowa, Poland') }}
+
+        <!-- Yogendra Rajoria -->
+        {{ team_card('Yogendra Rajoria', 'K R Mangalam University', '_img/team/yogendra-rajoria.jpg', 'Sohna, India') }}
+
+        <!-- Prof. (Dr) Chandra Mohan -->
+        {{ team_card('Prof. (Dr) Chandra Mohan', 'K R Mangalam University', '_img/team/chandra-mohan.webp', 'Sohna, India') }}
+
+        <!-- Prof. (Dr) Indu Sharma -->
+        {{ team_card('Prof. (Dr) Indu Sharma', 'NIET, NIMS University', '_img/team/indu-sharma.webp', 'Jaipur, India')
+        }}
+
+        <!-- Prof. (Dr) Anirudh Gupta -->
+        {{ team_card('Prof. (Dr) Anirudh Gupta', 'NIET, NIMS University', '_img/team/anirudh-gupta.webp', 'Jaipur,
+        India') }}
+
+        <!-- Prof. (Dr) Krishna Yadav -->
+        {{ team_card('Prof. (Dr) Krishna Yadav', 'JECRC University', '_img/team/krishna.webp', 'Jaipur, India') }}
+
+        <!-- Prof. (Dr) A K Saini -->
+        {{ team_card('Prof. (Dr) A K Saini', 'ICFAI University', '_img/team/ak-saini.webp', 'Jaipur, India') }}
+
+        <!-- Prof. (Dr) Narendra Kumar -->
+        {{ team_card('Prof. (Dr) Narendra Kumar', 'NIET, NIMS University', '_img/team/dr-narendra-kumar.webp', 'Jaipur,
+        India') }}
+
+        <!-- Prof. (Dr) Naveen K. Sharma -->
+        {{ team_card('Prof. (Dr) Naveen K. Sharma', 'IIMT', '_img/team/naveen.webp', 'Noida, India') }}
+
+        <!-- Prof. (Dr) Sanjeet Kumar -->
+        {{ team_card('Prof. (Dr) Sanjeet Kumar', 'LNCT', '_img/team/sanjeet.webp', 'Bhopal, India') }}
+
+      </div>
+    </div>
+
+    <!-- Volunteer Section -->
+    <div id="volunteers" class="team-section mb-5">
+      <h2 class="text-center mb-4">Volunteers</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Mr. Bhanu Pratap Singh -->
+        {{ team_card('Mr. Bhanu Pratap Singh', 'D A V (PG) College', '_img/team/bhanu.png', 'Dehradun, India') }}
+
+        <!-- Mr. Anirudh Pratap Singh -->
+        {{ team_card('Mr. Anirudh Pratap Singh', 'NIET, NIMS University', '_img/team/anirudh.png', 'Jaipur, India') }}
+
+        <!-- Ms Aditi Singh -->
+        {{ team_card('Ms. Aditi Singh', 'NIET, NIMS University', '_img/team/aditi.png', 'Jaipur, India') }}
       </div>
     </div>
   </div>
-  <!-- Team Members End -->
+</div>
+<!-- Team Members End -->
 {% endblock %}
