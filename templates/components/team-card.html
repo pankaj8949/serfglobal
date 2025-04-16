@@ -1,19 +1,28 @@
 {% macro team_card(name, position, image, description) %}
-<div class="col-lg-2 col-md-6 mb-4">
+<div class="col-lg-2 col-md-6 mb-2">
   <div class="card team-card h-75 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-    <div class="card-img-top position-relative overflow-hidden" style="height: 300px;">
-      
-        <img src="{{ image }}" alt="{{ name }}" class="img-fluid" style="object-fit: contain; object-position: top;" 
+    <div class="card-img-top position-relative overflow-hidden" style="height: 250px; width: 100%;">
+      <div style="width: 100%; height: 100%;">
+        <img src="{{ image }}" alt="{{ name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" 
              onerror="this.src='_img/team/user.jpg';">
-      
+      </div>
     </div>
-    <div class="card-body text-center p-1 pb-2" style="height: 150px;">
-      <h6 class="card-title mb-1 text-nowrap overflow-hidden text-truncate">{{ name }}</h6>
-      <p class="card-text text-muted">{{ position }}</p>
-      <p class="card-text text-muted">{{ description }}</p>
+    <div class="card-body text-center p-1" style="height: 110px;">
+      {% if name|length > 10 %}
+        <h6 class="card-title mt-1 mb-1 text-nowrap overflow-hidden text-truncate small">{{ name }}</h6>
+      {% else %}
+        <h6 class="card-title mb-1 text-nowrap overflow-hidden text-truncate">{{ name }}</h6>
+      {% endif %}
+      
+      {% if position|length > 10 %}
+        <p class="card-text text-muted mb-1 small"s>{{ position }}</p>
+      {% else %}
+        <p class="card-text text-muted mb-1">{{ position }}</p>
+      {% endif %}
+      
+
+        <p class="card-text text-muted small">{{ description }}</p>
     </div>
   </div>
 </div>
-
-
 {% endmacro %}
