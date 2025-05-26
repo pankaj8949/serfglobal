@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 {% block body %}
-  {% from 'components/team-card.html' import team_card %}
-  {% from 'components/project-card.html' import project_card %}
+{% from 'components/team-card.html' import team_card %}
+{% from 'components/project-card.html' import project_card %}
 
-  <!-- Header Start -->
-  <!-- 
+<!-- Header Start -->
+<!-- 
 <div class="container-fluid header p-0 mb-5">
     <div class="row g-0 align-items-center">
         <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
@@ -22,646 +22,712 @@
         </div>
     </div>
 </div>  -->
-  <!-- Header End -->
+<!-- Header End -->
 
-  <!-- Welcome Section Start -->
-  <div class="container-xxl py-5" style="min-height: 500px;">
-    <div class="container">
-      <div class="row g-5 align-items-center" style="min-height: 400px;">
-        <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
-          <h1 class="mb-4"><span style="color: #000;">Welcome to</span> <span style="color: #9e055d;">SERF International</span></h1>
-          <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;"></div>
-          <p style="color: black; text-align: justify;">A platform to promote multi-disciplinary research in Science, Technology, and Management, is an innovative non-profit-making foundation for researchers/ academicians around the globe for research and developments which make this world a happy home for all living.</p>
-        </div>
-        <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
-          <img class="img-fluid rounded" src="_img/inner-banner.jpeg" alt="SERF International" style="width: 100%; height: 100%; object-fit: cover;" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Welcome Section End -->
-  <!-- About SERF Section Start -->
-  <div class="container-fluid py-5" style="background-color: #2a3056; background-image: linear-gradient(135deg, #2a3056 0%, #1e2443 100%); color: white;">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-          <h1 class="display-5 fw-bold mb-4" style="color: white; position: relative;">About SERF International<div style="width: 80px; height: 4px; background-color: #9e055d; margin-top: 15px; border-radius: 10px;"></div></h1>
-
-          <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">SERF has now members in Slovakia, Estonia, Romania, Ukraine, USA, Poland, Nigeria, Tanzania, Georgia, Australia, and Africa, boosting networking opportunities that strengthen ties within and across countries and communities that are technical.</p>
-
-          <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">SERF members are playing a dynamic role in being on the organizing committee, Editorial Board, Reviewers committee, and Advisory Committee of International conventions & Scientific events.</p>
-
-          <div class="mt-4">
-            <a href="/about" class="btn btn-light btn-lg px-4 me-2" style="border-radius: 30px; font-weight: 500;">Learn More</a>
-            <a href="/contact" class="btn btn-outline-light btn-lg px-4" style="border-radius: 30px; font-weight: 500;">Contact Us</a>
-          </div>
-        </div>
-
-        <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-          <div class="position-relative" style="border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.2);">
-            <img src="_img/img-1.jpg" alt="SERF International" class="img-fluid" style="width: 100%; border-radius: 15px; transform: scale(1.01);" />
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); 
-                      height: 50%; pointer-events: none;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- About SERF Section End -->
-  <!-- SERF features Section Start -->
-  <div class="container-fluid py-5">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-          <h1 class="mb-4">SERF Features</h1>
-          <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;"></div>
-          <h4 class="mb-4">Easy and effective way to get your article publish.</h4>
-
-          <div class="row g-4">
-            <!-- Fast Service -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si1.png" alt="Fast Service" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">Fast service</h5>
-                  <p class="card-text" style="color: #555;">SERF publishes articles within 48 hrs as it has a wide team of reviewers</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Publication Fees -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si2.png" alt="Publication Fees" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">Publication Fees</h5>
-                  <p class="card-text" style="color: #555;">Fees is very low. Online publication charges are xxxx Rs only</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Expert Team -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si3.png" alt="Expert Team" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">Expert team</h5>
-                  <p class="card-text" style="color: #555;">SERF has board members from Top Institutes and University</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- E-Certificates -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si4.png" alt="E-Certificates" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">E-Certificates</h5>
-                  <p class="card-text" style="color: #555;">SERF provides e-certificates for all publishes articles within 4 hrs.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- ISO -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si5.png" alt="ISO" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">ISO</h5>
-                  <p class="card-text" style="color: #555;">Uploading Soon</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Searchable -->
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
-                <div class="card-body text-center p-4">
-                  <div class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                    <img src="_img/icons/si6.png" alt="Google Searchable" style="width: 50px;" />
-                  </div>
-                  <h5 class="card-title mt-3">Google Searchable</h5>
-                  <p class="card-text" style="color: #555;">All publishes articles are searchable in different search Engine like Google</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- SERF features Section End -->
-
-  <!-- Our Team Section Start -->
+<!-- Welcome Section Start -->
+<div class="container-xxl py-5" style="min-height: 500px;">
   <div class="container">
-    <div class="container">
-      <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1200px;">
-        <h1><span style="color: #000;">Our</span> <span style="color: #9e055d;">Team SERF India</span></h1>
-        <div class="mx-auto" style="width: 100px; height: 5px; background-color: #9e055d; margin: 15px auto; border-radius: 10px;"></div>
-
-        <div class="row g-3 justify-content-center">
-          <!-- Dr. Sanjeev Kumar -->
-          {{ team_card('Dr. Sanjeev Kumar', 'Executive President', '_img/team/dr-sanjeev-sir.webp', 'Agra, India') }}
-
-          <!-- Dr. Ilona Paweloszek -->
-          {{ team_card('Dr. Ilona Paweloszek', 'Executive Vice President', '_img/team/ilona.webp', 'Czestochowa, Poland') }}
-
-          <!-- Dr. Alok Aggrawal -->
-          {{ team_card('Dr. Alok Aggrawal', 'Executive Vice President', '_img/team/alok.webp', 'Dehradun, India') }}
-
-          <!-- Dr. Yogendra Rajoria -->
-          {{ team_card('Dr. Yogendra Rajoria', 'Executive Vice President', '_img/team/yogendra-rajoria.jpg', 'Gurugram, India') }}
-
-          <!-- Pradeep Upadhyay -->
-          {{ team_card('Prof. Pradeep Upadhyay', 'Executive Vice President', '_img/team/pradeep.png', 'Jaipur, India') }}
-
-          <!-- Dr. Chandra Mohan -->
-          {{ team_card('Dr. Chandra Mohan', 'Executive Vice President', '_img/team/chandra-mohan.webp', 'Gurugram, India') }}
-        </div>  
+    <div class="row g-5 align-items-center" style="min-height: 400px;">
+      <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="mb-4"><span style="color: #000;">Welcome to</span> <span style="color: #9e055d;">Shanti Education
+            Research Foundation</span></h1>
+        <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;">
+        </div>
+        <p style="color: black; text-align: justify;">A platform to promote multi-disciplinary research in Science,
+          Technology, and Management, is an innovative non-profit-making foundation for researchers/ academicians around
+          the globe for research and developments which make this world a happy home for all living.</p>
+      </div>
+      <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+        <img class="img-fluid rounded" src="_img/inner-banner.jpeg" alt="SERF International"
+          style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
     </div>
   </div>
-  <!-- Our Team Section End -->
+</div>
+<!-- Welcome Section End -->
+<!-- About SERF Section Start -->
+<div class="container-fluid py-5"
+  style="background-color: #2a3056; background-image: linear-gradient(135deg, #2a3056 0%, #1e2443 100%); color: white;">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="display-5 fw-bold mb-4" style="color: white; position: relative;">About Shanti Education Research
+          Foundation<div
+            style="width: 80px; height: 4px; background-color: #9e055d; margin-top: 15px; border-radius: 10px;"></div>
+        </h1>
 
-    <!-- Upcoming Projects Section Start -->
-    <section class="bg-light py-5">
-      <div class="container-xxl project py-5">
-        <div class="container">
-          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
-            <div class="section-title">
-              <h6>Coming Soon</h6>
-              <h2 class="mb-4">
-                Our Upcoming Projects
-              </h2>
-              <p>Exciting new solutions currently in development to serve the academic and research community.</p>
-            </div>
-          </div>
-  
-          <div class="row g-4">
-            <!-- Upcoming Project 1: BRAD Biochemical Research Lab -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-              {{ project_card(
-                icon="flask",
-                title="BRAD Biochemical Research Lab",
-                description="Advanced laboratory facilities for biochemical research with state-of-the-art equipment and analysis tools.",
-                features=["Molecular Analysis", "Protein Research"],
-                link="#",
-                status_class="warning",
-                status_text="Coming Q3 2023",
-                is_disabled=true
-              ) }}
-            </div>
-            
-            <!-- Upcoming Project 2: BRAD AI Integration Lab -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-              {{ project_card(
-                icon="robot",
-                title="BRAD AI Integration Lab",
-                description="Cutting-edge AI research facility focused on integrating artificial intelligence into scientific and management processes.",
-                features=["Machine Learning Models", "Process Automation"],
-                link="#",
-                status_class="warning",
-                status_text="Coming Q4 2023",
-                is_disabled=true
-              ) }}
-            </div>
-            
-            <!-- Upcoming Project 3: BRAD Data Analytics Lab -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-              {{ project_card(
-                icon="chart-bar",
-                title="BRAD Data Analytics Lab",
-                description="Specialized facility for big data processing, visualization, and analytics to support research and decision-making.",
-                features=["Big Data Processing", "Predictive Analytics"],
-                link="#",
-                status_class="warning",
-                status_text="Coming Q1 2024",
-                is_disabled=true
-              ) }}
-            </div>
-          </div>
-          <!-- Row End -->
+        <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">Shanti Education Research
+          Foundation has now members in Slovakia, Estonia, Romania, Ukraine, USA, Poland, Nigeria, Tanzania, Georgia,
+          Australia, and Africa, boosting networking opportunities that strengthen ties within and across countries and
+          communities that are technical.</p>
+
+        <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">Shanti Education Research Foundation members are
+          playing a dynamic role in being on the organizing committee, Editorial Board, Reviewers committee, and
+          Advisory Committee of International conventions & Scientific events.</p>
+
+        <div class="mt-4">
+          <a href="/about" class="btn btn-light btn-lg px-4 me-2" style="border-radius: 30px; font-weight: 500;">Learn
+            More</a>
+          <a href="/contact" class="btn btn-outline-light btn-lg px-4"
+            style="border-radius: 30px; font-weight: 500;">Contact Us</a>
         </div>
       </div>
-    </section>
 
-  <!-- Team Size Stastistics Start -->
-  <section id="team-size-statistics">
-    <div class="container-xxl py-5" style="background-color: #f8f9fa;">
-      <div class="container">
-        <div class="row g-5 mb-5">
-          <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
-            <div class="section-title text-center">
-              <h6 style="color: #9e055d; letter-spacing: 2px; text-transform: uppercase;">Our Growth Statistics</h6>
-              <h2 class="mb-4" style="color: #333; font-weight: 700; position: relative; display: inline-block;">
-                Tracking Our Progress and Future Goals
-                <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: #9e055d;"></span>
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <!-- Team Size Row -->
-        <div class="row g-5 mb-5">
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <div class="section-title">
-              <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #9e055d; padding-left: 15px;">Team Size Growth</h3>
-            </div>
-            <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">Our team is comprised of experienced professionals who are dedicated to providing the best possible service to our clients. We are continuously growing to meet the increasing demands of the education sector.</p>
-            <!-- Team Size Table -->
-            <div class="team-size-table mt-4">
-              <table class="table table-bordered" style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
-                <thead style="background-color: #9e055d;">
-                  <tr>
-                    <th style="color: white; font-weight: 600;">Timeline</th>
-                    <th style="color: white; font-weight: 600;">Team Size</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="background-color: rgba(158, 5, 93, 0.05);">
-                    <td style="font-weight: 500;">2024</td>
-                    <td>10 employees</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2029</td>
-                    <td>30 employees</td>
-                  </tr>
-                  <tr style="background-color: rgba(158, 5, 93, 0.05);">
-                    <td style="font-weight: 500;">2034</td>
-                    <td>120 employees</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2039</td>
-                    <td>520 employees</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
-            <div class="team-growth-chart" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="chart-container" style="height: 300px; position: relative;">
-                <canvas id="teamGrowthChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Journals Row -->
-        <div class="row g-5 mb-5">
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
-            <div class="journals-growth-chart" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="chart-container" style="height: 300px; position: relative;">
-                <canvas id="journalsGrowthChart"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <div class="section-title">
-              <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px;">Number of Journals</h3>
-            </div>
-            <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">We are committed to expanding our academic reach through quality publications. Our journal portfolio is growing steadily to cover diverse educational domains.</p>
-            <!-- Journals Table -->
-            <div class="journals-table mt-4">
-              <table class="table table-bordered" style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
-                <thead style="background-color: #3498db;">
-                  <tr>
-                    <th style="color: white; font-weight: 600;">Timeline</th>
-                    <th style="color: white; font-weight: 600;">Number of Journals</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="background-color: rgba(52, 152, 219, 0.05);">
-                    <td style="font-weight: 500;">2024</td>
-                    <td>15 journals</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2029</td>
-                    <td>25 journals</td>
-                  </tr>
-                  <tr style="background-color: rgba(52, 152, 219, 0.05);">
-                    <td style="font-weight: 500;">2034</td>
-                    <td>35 journals</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2039</td>
-                    <td>65 journals</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contributing Countries Row -->
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <div class="section-title">
-              <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #27ae60; padding-left: 15px;">Contributing Countries</h3>
-            </div>
-            <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">Our global footprint continues to expand as we collaborate with educators and institutions worldwide. We're proud of our growing international network.</p>
-            <!-- Countries Table -->
-            <div class="countries-table mt-4">
-              <table class="table table-bordered" style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
-                <thead style="background-color: #27ae60;">
-                  <tr>
-                    <th style="color: white; font-weight: 600;">Timeline</th>
-                    <th style="color: white; font-weight: 600;">Contributing Countries</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="background-color: rgba(39, 174, 96, 0.05);">
-                    <td style="font-weight: 500;">2024</td>
-                    <td>10 countries</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2029</td>
-                    <td>25 countries</td>
-                  </tr>
-                  <tr style="background-color: rgba(39, 174, 96, 0.05);">
-                    <td style="font-weight: 500;">2034</td>
-                    <td>75 countries</td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 500;">2039</td>
-                    <td>175 countries</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
-            <div class="countries-growth-chart" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="chart-container" style="height: 300px; position: relative;">
-                <canvas id="countriesGrowthChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Charts JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            // Team Growth Chart
-            const teamCtx = document.getElementById('teamGrowthChart').getContext('2d')
-            const teamGrowthChart = new Chart(teamCtx, {
-              type: 'line',
-              data: {
-                labels: ['2024', '2029', '2034', '2039'],
-                datasets: [
-                  {
-                    label: 'Team Size Projection',
-                    data: [10, 30, 120, 520],
-                    backgroundColor: 'rgba(158, 5, 93, 0.2)',
-                    borderColor: '#9e055d',
-                    borderWidth: 3,
-                    pointBackgroundColor: '#9e055d',
-                    pointRadius: 6,
-                    tension: 0.3
-                  }
-                ]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                    title: {
-                      display: true,
-                      text: 'Number of Employees',
-                      color: '#666'
-                    },
-                    grid: {
-                      color: 'rgba(0, 0, 0, 0.05)'
-                    }
-                  },
-                  x: {
-                    title: {
-                      display: true,
-                      text: 'Timeline',
-                      color: '#666'
-                    },
-                    grid: {
-                      display: false
-                    }
-                  }
-                },
-                plugins: {
-                  title: {
-                    display: true,
-                    text: 'Team Size Growth Projection',
-                    color: '#333',
-                    font: {
-                      size: 16,
-                      weight: 'bold'
-                    }
-                  },
-                  legend: {
-                    labels: {
-                      font: {
-                        size: 12
-                      }
-                    }
-                  }
-                }
-              }
-            })
-          
-            // Journals Growth Chart
-            const journalsCtx = document.getElementById('journalsGrowthChart').getContext('2d')
-            const journalsGrowthChart = new Chart(journalsCtx, {
-              type: 'bar',
-              data: {
-                labels: ['2024', '2029', '2034', '2039'],
-                datasets: [
-                  {
-                    label: 'Number of Journals',
-                    data: [15, 25, 35, 65],
-                    backgroundColor: 'rgba(52, 152, 219, 0.7)',
-                    borderColor: 'rgba(52, 152, 219, 1)',
-                    borderWidth: 1
-                  }
-                ]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                    title: {
-                      display: true,
-                      text: 'Number of Journals',
-                      color: '#666'
-                    },
-                    grid: {
-                      color: 'rgba(0, 0, 0, 0.05)'
-                    }
-                  },
-                  x: {
-                    title: {
-                      display: true,
-                      text: 'Timeline',
-                      color: '#666'
-                    },
-                    grid: {
-                      display: false
-                    }
-                  }
-                },
-                plugins: {
-                  title: {
-                    display: true,
-                    text: 'Journal Growth Projection',
-                    color: '#333',
-                    font: {
-                      size: 16,
-                      weight: 'bold'
-                    }
-                  }
-                }
-              }
-            })
-          
-            // Countries Growth Chart
-            const countriesCtx = document.getElementById('countriesGrowthChart').getContext('2d')
-            const countriesGrowthChart = new Chart(countriesCtx, {
-              type: 'line',
-              data: {
-                labels: ['2024', '2029', '2034', '2039'],
-                datasets: [
-                  {
-                    label: 'Contributing Countries',
-                    data: [10, 25, 75, 175],
-                    backgroundColor: 'rgba(39, 174, 96, 0.2)',
-                    borderColor: '#27ae60',
-                    borderWidth: 3,
-                    pointBackgroundColor: '#27ae60',
-                    pointRadius: 6,
-                    tension: 0.3
-                  }
-                ]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                    title: {
-                      display: true,
-                      text: 'Number of Countries',
-                      color: '#666'
-                    },
-                    grid: {
-                      color: 'rgba(0, 0, 0, 0.05)'
-                    }
-                  },
-                  x: {
-                    title: {
-                      display: true,
-                      text: 'Timeline',
-                      color: '#666'
-                    },
-                    grid: {
-                      display: false
-                    }
-                  }
-                },
-                plugins: {
-                  title: {
-                    display: true,
-                    text: 'Global Reach Projection',
-                    color: '#333',
-                    font: {
-                      size: 16,
-                      weight: 'bold'
-                    }
-                  }
-                }
-              }
-            })
-          })
-        </script>
-      </div>
-    </div>
-  </section>
-  <!-- Team Size Stastistics End -->
-
-  <!-- The framework of ethical behavior Section Start -->
-  <div class="container-fluid py-5" style="max-width: 1400px; margin: 0 auto;">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
-          <h1 class="mb-4" style="font-size: 2.5rem; line-height: 1.3; margin-bottom: 1.5rem !important;">The Framework of ethical behavior</h1>
-          <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;"></div>
-          <p style="color: black; text-align: justify; margin-bottom: 2rem; font-size: 16px; letter-spacing: 0.5px;">SERF members, the Management Board, and the Editorial Board are highly dedicated to their academic work. SERF has also committed to the promotion of high-quality research works, which can be matched with Global Standards and regulations for organizing academic research activities.</p>
-        </div>
-        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-          <img class="img-fluid rounded" src="https://serfglobal.com/public/img/post-06.jpg" alt="" style="max-width: 80%; height: 80%;" />
+      <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+        <div class="position-relative"
+          style="border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.2);">
+          <img src="_img/img-1.jpg" alt="Shanti Education Research Foundation" class="img-fluid"
+            style="width: 100%; border-radius: 15px; transform: scale(1.01);" />
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); 
+                      height: 50%; pointer-events: none;"></div>
         </div>
       </div>
     </div>
   </div>
-  <!-- The framework of ethical behavior Section End -->
+</div>
+<!-- About SERF Section End -->
+<!-- SERF features Section Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+        <h1 class="mb-4">Shanti Education Research Foundation Features</h1>
+        <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;">
+        </div>
+        <h4 class="mb-4">Easy and effective way to get your article publish.</h4>
 
-  <!-- Publication Timeline Section Start -->
-  <div class="container-xxl py-5">
+        <div class="row g-4">
+          <!-- Fast Service -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si1.png" alt="Fast Service" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">Fast service</h5>
+                <p class="card-text" style="color: #555;">Shanti Education Research Foundation publishes articles within
+                  48 hrs as it has a wide team of reviewers</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publication Fees -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si2.png" alt="Publication Fees" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">Publication Fees</h5>
+                <p class="card-text" style="color: #555;">Fees is very low. Online publication charges are xxxx Rs only
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert Team -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si3.png" alt="Expert Team" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">Expert team</h5>
+                <p class="card-text" style="color: #555;">Shanti Education Research Foundation has board members from
+                  Top Institutes and University</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- E-Certificates -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si4.png" alt="E-Certificates" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">E-Certificates</h5>
+                <p class="card-text" style="color: #555;">Shanti Education Research Foundation provides e-certificates
+                  for all publishes articles within 4 hrs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ISO -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si5.png" alt="ISO" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">ISO</h5>
+                <p class="card-text" style="color: #555;">Uploading Soon</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Searchable -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-3 hover-shadow transition-300">
+              <div class="card-body text-center p-4">
+                <div
+                  class="feature-icon bg-light rounded-circle mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px;">
+                  <img src="_img/icons/si6.png" alt="Google Searchable" style="width: 50px;" />
+                </div>
+                <h5 class="card-title mt-3">Google Searchable</h5>
+                <p class="card-text" style="color: #555;">All publishes articles are searchable in different search
+                  Engine like Google</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SERF features Section End -->
+
+<!-- Our Team Section Start -->
+<div class="container">
+  <div class="container">
+    <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1200px;">
+      <h1><span style="color: #000;">Our</span> <span style="color: #9e055d;">Team</span></h1>
+      <div class="mx-auto"
+        style="width: 100px; height: 5px; background-color: #9e055d; margin: 15px auto; border-radius: 10px;"></div>
+
+      <div class="row g-3 justify-content-center">
+        <!-- Dr. Sanjeev Kumar -->
+        {{ team_card('Dr. Sanjeev Kumar', 'Executive President', '_img/team/dr-sanjeev-sir.webp', 'Agra, India') }}
+
+        <!-- Dr. Ilona Paweloszek -->
+        {{ team_card('Dr. Ilona Paweloszek', 'Executive Vice President', '_img/team/ilona.webp', 'Czestochowa, Poland')
+        }}
+
+        <!-- Dr. Alok Aggrawal -->
+        {{ team_card('Dr. Alok Aggrawal', 'Executive Vice President', '_img/team/alok.webp', 'Dehradun, India') }}
+
+        <!-- Dr. Yogendra Rajoria -->
+        {{ team_card('Dr. Yogendra Rajoria', 'Executive Vice President', '_img/team/yogendra-rajoria.jpg', 'Gurugram,
+        India') }}
+
+        <!-- Pradeep Upadhyay -->
+        {{ team_card('Prof. Pradeep Upadhyay', 'Executive Vice President', '_img/team/pradeep.png', 'Jaipur, India') }}
+
+        <!-- Dr. Chandra Mohan -->
+        {{ team_card('Dr. Chandra Mohan', 'Executive Vice President', '_img/team/chandra-mohan.webp', 'Gurugram, India')
+        }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our Team Section End -->
+
+<!-- Upcoming Projects Section Start -->
+<section class="bg-light py-5">
+  <div class="container-xxl project py-5">
     <div class="container">
-      <div class="text-center mx-auto mb-5">
-        <h1><span style="color: #000;">SERF Publishes</span><span style="color: #9e055d;">Within 48 Hours</span></h1>
-        <div class="mx-auto" style="width: 100px; height: 5px; background-color: #9e055d; margin: 15px auto; border-radius: 10px;"></div>
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+        <div class="section-title">
+          <h6>Coming Soon</h6>
+          <h2 class="mb-4">
+            Our Upcoming Projects
+          </h2>
+          <p>Exciting new solutions currently in development to serve the academic and research community.</p>
+        </div>
       </div>
 
       <div class="row g-4">
-        <!-- Call for Papers -->
-        <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h3>Call for Papers</h3>
-          <img src="img/icons/1.png" alt="Call for Papers" style="width: 60px; margin: 20px 0;" />
-          <div style="font-size: 5rem; color: black; font-weight: bold; margin: 15px 0;">
-            24x7
-            <span style="display: block; font-size: 1.2rem; font-weight: normal;">Working</span>
-          </div>
-          <button class="btn btn-outline-dark px-4">Submit Today</button>
+        <!-- Upcoming Project 1: BRAD Biochemical Research Lab -->
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+          {{ project_card(
+          icon="flask",
+          title="BRAD Biochemical Research Lab",
+          description="Advanced laboratory facilities for biochemical research with state-of-the-art equipment and
+          analysis tools.",
+          features=["Molecular Analysis", "Protein Research"],
+          link="#",
+          status_class="warning",
+          status_text="Coming Q3 2023",
+          is_disabled=true
+          ) }}
         </div>
 
-        <!-- Notification of Acceptance -->
-        <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
-          <h3>Notification of Acceptance</h3>
-          <img src="img/icons/2.png" alt="Notification" style="width: 60px; margin: 20px 0;" />
-          <div>
-            <span style="color: #9e055d; font-size: 1.5rem; font-weight: bold;">Within</span>
-            <div style="font-size: 5rem; font-weight: bold; color: #9e055d;">24</div>
-            <span style="color: #9e055d; font-size: 1.5rem; font-weight: bold;">Hours</span>
-          </div>
-          <button class="btn btn-primary px-4" style="background-color: #9e055d; border: none;">Submit Today</button>
+        <!-- Upcoming Project 2: BRAD AI Integration Lab -->
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+          {{ project_card(
+          icon="robot",
+          title="BRAD AI Integration Lab",
+          description="Cutting-edge AI research facility focused on integrating artificial intelligence into scientific
+          and management processes.",
+          features=["Machine Learning Models", "Process Automation"],
+          link="#",
+          status_class="warning",
+          status_text="Coming Q4 2023",
+          is_disabled=true
+          ) }}
         </div>
 
-        <!-- E-Certificates -->
-        <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
-          <h3>E-Certificates</h3>
-          <img src="img/icons/3.png" alt="E-Certificates" style="width: 60px; margin: 20px 0;" />
-          <div>
-            <span>Within</span>
-            <div style="font-size: 3.5rem; font-weight: bold;">04</div>
-            <span>Hours</span>
-          </div>
-          <button class="btn btn-outline-dark px-4">Submit Today</button>
+        <!-- Upcoming Project 3: BRAD Data Analytics Lab -->
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+          {{ project_card(
+          icon="chart-bar",
+          title="BRAD Data Analytics Lab",
+          description="Specialized facility for big data processing, visualization, and analytics to support research
+          and decision-making.",
+          features=["Big Data Processing", "Predictive Analytics"],
+          link="#",
+          status_class="warning",
+          status_text="Coming Q1 2024",
+          is_disabled=true
+          ) }}
         </div>
+      </div>
+      <!-- Row End -->
+    </div>
+  </div>
+</section>
+
+<!-- Team Size Stastistics Start -->
+<section id="team-size-statistics">
+  <div class="container-xxl py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
+          <div class="section-title text-center">
+            <h6 style="color: #9e055d; letter-spacing: 2px; text-transform: uppercase;">Our Growth Statistics</h6>
+            <h2 class="mb-4" style="color: #333; font-weight: 700; position: relative; display: inline-block;">
+              Tracking Our Progress and Future Goals
+              <span
+                style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: #9e055d;"></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Size Row -->
+      <div class="row g-5 mb-5">
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="section-title">
+            <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #9e055d; padding-left: 15px;">Team Size
+              Growth</h3>
+          </div>
+          <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">Our team is comprised of experienced
+            professionals who are dedicated to providing the best possible service to our clients. We are continuously
+            growing to meet the increasing demands of the education sector.</p>
+          <!-- Team Size Table -->
+          <div class="team-size-table mt-4">
+            <table class="table table-bordered"
+              style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
+              <thead style="background-color: #9e055d;">
+                <tr>
+                  <th style="color: white; font-weight: 600;">Timeline</th>
+                  <th style="color: white; font-weight: 600;">Team Size</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgba(158, 5, 93, 0.05);">
+                  <td style="font-weight: 500;">2024</td>
+                  <td>10 employees</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2029</td>
+                  <td>30 employees</td>
+                </tr>
+                <tr style="background-color: rgba(158, 5, 93, 0.05);">
+                  <td style="font-weight: 500;">2034</td>
+                  <td>120 employees</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2039</td>
+                  <td>520 employees</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+          <div class="team-growth-chart"
+            style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="chart-container" style="height: 300px; position: relative;">
+              <canvas id="teamGrowthChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journals Row -->
+      <div class="row g-5 mb-5">
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+          <div class="journals-growth-chart"
+            style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="chart-container" style="height: 300px; position: relative;">
+              <canvas id="journalsGrowthChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="section-title">
+            <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px;">Number of
+              Journals</h3>
+          </div>
+          <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">We are committed to expanding our academic reach
+            through quality publications. Our journal portfolio is growing steadily to cover diverse educational
+            domains.</p>
+          <!-- Journals Table -->
+          <div class="journals-table mt-4">
+            <table class="table table-bordered"
+              style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
+              <thead style="background-color: #3498db;">
+                <tr>
+                  <th style="color: white; font-weight: 600;">Timeline</th>
+                  <th style="color: white; font-weight: 600;">Number of Journals</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgba(52, 152, 219, 0.05);">
+                  <td style="font-weight: 500;">2024</td>
+                  <td>15 journals</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2029</td>
+                  <td>25 journals</td>
+                </tr>
+                <tr style="background-color: rgba(52, 152, 219, 0.05);">
+                  <td style="font-weight: 500;">2034</td>
+                  <td>35 journals</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2039</td>
+                  <td>65 journals</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributing Countries Row -->
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="section-title">
+            <h3 class="mb-3" style="color: #2c3e50; border-left: 5px solid #27ae60; padding-left: 15px;">Contributing
+              Countries</h3>
+          </div>
+          <p style="color: #555; font-size: 1.05rem; line-height: 1.8;">Our global footprint continues to expand as we
+            collaborate with educators and institutions worldwide. We're proud of our growing international network.</p>
+          <!-- Countries Table -->
+          <div class="countries-table mt-4">
+            <table class="table table-bordered"
+              style="box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 8px; overflow: hidden;">
+              <thead style="background-color: #27ae60;">
+                <tr>
+                  <th style="color: white; font-weight: 600;">Timeline</th>
+                  <th style="color: white; font-weight: 600;">Contributing Countries</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgba(39, 174, 96, 0.05);">
+                  <td style="font-weight: 500;">2024</td>
+                  <td>10 countries</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2029</td>
+                  <td>25 countries</td>
+                </tr>
+                <tr style="background-color: rgba(39, 174, 96, 0.05);">
+                  <td style="font-weight: 500;">2034</td>
+                  <td>75 countries</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 500;">2039</td>
+                  <td>175 countries</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+          <div class="countries-growth-chart"
+            style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <div class="chart-container" style="height: 300px; position: relative;">
+              <canvas id="countriesGrowthChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Team Growth Chart
+          const teamCtx = document.getElementById('teamGrowthChart').getContext('2d')
+          const teamGrowthChart = new Chart(teamCtx, {
+            type: 'line',
+            data: {
+              labels: ['2024', '2029', '2034', '2039'],
+              datasets: [
+                {
+                  label: 'Team Size Projection',
+                  data: [10, 30, 120, 520],
+                  backgroundColor: 'rgba(158, 5, 93, 0.2)',
+                  borderColor: '#9e055d',
+                  borderWidth: 3,
+                  pointBackgroundColor: '#9e055d',
+                  pointRadius: 6,
+                  tension: 0.3
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Number of Employees',
+                    color: '#666'
+                  },
+                  grid: {
+                    color: 'rgba(0, 0, 0, 0.05)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Timeline',
+                    color: '#666'
+                  },
+                  grid: {
+                    display: false
+                  }
+                }
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Team Size Growth Projection',
+                  color: '#333',
+                  font: {
+                    size: 16,
+                    weight: 'bold'
+                  }
+                },
+                legend: {
+                  labels: {
+                    font: {
+                      size: 12
+                    }
+                  }
+                }
+              }
+            }
+          })
+
+          // Journals Growth Chart
+          const journalsCtx = document.getElementById('journalsGrowthChart').getContext('2d')
+          const journalsGrowthChart = new Chart(journalsCtx, {
+            type: 'bar',
+            data: {
+              labels: ['2024', '2029', '2034', '2039'],
+              datasets: [
+                {
+                  label: 'Number of Journals',
+                  data: [15, 25, 35, 65],
+                  backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                  borderColor: 'rgba(52, 152, 219, 1)',
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Number of Journals',
+                    color: '#666'
+                  },
+                  grid: {
+                    color: 'rgba(0, 0, 0, 0.05)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Timeline',
+                    color: '#666'
+                  },
+                  grid: {
+                    display: false
+                  }
+                }
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Journal Growth Projection',
+                  color: '#333',
+                  font: {
+                    size: 16,
+                    weight: 'bold'
+                  }
+                }
+              }
+            }
+          })
+
+          // Countries Growth Chart
+          const countriesCtx = document.getElementById('countriesGrowthChart').getContext('2d')
+          const countriesGrowthChart = new Chart(countriesCtx, {
+            type: 'line',
+            data: {
+              labels: ['2024', '2029', '2034', '2039'],
+              datasets: [
+                {
+                  label: 'Contributing Countries',
+                  data: [10, 25, 75, 175],
+                  backgroundColor: 'rgba(39, 174, 96, 0.2)',
+                  borderColor: '#27ae60',
+                  borderWidth: 3,
+                  pointBackgroundColor: '#27ae60',
+                  pointRadius: 6,
+                  tension: 0.3
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Number of Countries',
+                    color: '#666'
+                  },
+                  grid: {
+                    color: 'rgba(0, 0, 0, 0.05)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Timeline',
+                    color: '#666'
+                  },
+                  grid: {
+                    display: false
+                  }
+                }
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Global Reach Projection',
+                  color: '#333',
+                  font: {
+                    size: 16,
+                    weight: 'bold'
+                  }
+                }
+              }
+            }
+          })
+        })
+      </script>
+    </div>
+  </div>
+</section>
+<!-- Team Size Stastistics End -->
+
+<!-- The framework of ethical behavior Section Start -->
+<div class="container-fluid py-5" style="max-width: 1400px; margin: 0 auto;">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
+        <h1 class="mb-4" style="font-size: 2.5rem; line-height: 1.3; margin-bottom: 1.5rem !important;">The Framework of
+          ethical behavior</h1>
+        <div style="width: 100px; height: 5px; background-color: #9e055d; margin-bottom: 1.5rem; border-radius: 10px;">
+        </div>
+        <p style="color: black; text-align: justify; margin-bottom: 2rem; font-size: 16px; letter-spacing: 0.5px;">
+          Shanti Education Research Foundation members, the Management Board, and the Editorial Board are highly
+          dedicated to their academic work. Shanti Education Research Foundation has also committed to the promotion of
+          high-quality research works, which can be matched with Global Standards and regulations for organizing
+          academic research activities.</p>
+      </div>
+      <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+        <img class="img-fluid rounded" src="https://serfglobal.com/public/img/post-06.jpg" alt=""
+          style="max-width: 80%; height: 80%;" />
       </div>
     </div>
   </div>
-  <!-- Publication Timeline Section End -->
+</div>
+<!-- The framework of ethical behavior Section End -->
+
+<!-- Publication Timeline Section Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5">
+      <h1><span style="color: #000;">SERF Publishes</span><span style="color: #9e055d;"> Within 48 Hours</span></h1>
+      <div class="mx-auto"
+        style="width: 100px; height: 5px; background-color: #9e055d; margin: 15px auto; border-radius: 10px;"></div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Call for Papers -->
+      <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h3>Call for Papers</h3>
+        <img src="img/icons/1.png" alt="Call for Papers" style="width: 60px; margin: 20px 0;" />
+        <div style="font-size: 5rem; color: black; font-weight: bold; margin: 15px 0;">
+          24x7
+          <span style="display: block; font-size: 1.2rem; font-weight: normal;">Working</span>
+        </div>
+        <button class="btn btn-outline-dark px-4">Submit Today</button>
+      </div>
+
+      <!-- Notification of Acceptance -->
+      <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
+        <h3>Notification of Acceptance</h3>
+        <img src="img/icons/2.png" alt="Notification" style="width: 60px; margin: 20px 0;" />
+        <div>
+          <span style="color: #9e055d; font-size: 1.5rem; font-weight: bold;">Within</span>
+          <div style="font-size: 5rem; font-weight: bold; color: #9e055d;">24</div>
+          <span style="color: #9e055d; font-size: 1.5rem; font-weight: bold;">Hours</span>
+        </div>
+        <button class="btn btn-primary px-4" style="background-color: #9e055d; border: none;">Submit Today</button>
+      </div>
+
+      <!-- E-Certificates -->
+      <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+        <h3>E-Certificates</h3>
+        <img src="img/icons/3.png" alt="E-Certificates" style="width: 60px; margin: 20px 0;" />
+        <div>
+          <span>Within</span>
+          <div style="font-size: 3.5rem; font-weight: bold;">04</div>
+          <span>Hours</span>
+        </div>
+        <button class="btn btn-outline-dark px-4">Submit Today</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Publication Timeline Section End -->
 {% endblock %}
